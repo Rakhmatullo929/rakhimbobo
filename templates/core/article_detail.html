@@ -1,0 +1,113 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<section class="py-5">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <!-- Article Header -->
+                <div class="mb-5">
+                    <a href="{% url 'core:articles_news' %}" class="text-primary-custom mb-4 d-inline-block"><i class="fas fa-arrow-left me-2"></i> Back to Articles</a>
+                    <h1 class="display-4 fw-bold mb-3">{{ article.title }}</h1>
+                    <div class="d-flex align-items-center text-muted mb-4">
+                        <span><i class="far fa-calendar-alt me-1"></i> {{ article.created_at|date:"F d, Y" }}</span>
+                    </div>
+                    
+                    {% if article.image %}
+                        <img src="{{ article.image.url }}" alt="{{ article.title }}" class="img-fluid rounded shadow mb-5">
+                    {% endif %}
+                </div>
+                
+                <!-- Article Content -->
+                <div class="article-content lh-lg">
+                    {{ article.content|linebreaks }}
+                </div>
+                
+                <!-- Share Section -->
+                <div class="mt-5 p-4 bg-light rounded">
+                    <h5 class="mb-3">Share this article</h5>
+                    <div class="d-flex gap-2">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-facebook-f me-2"></i> Facebook</a>
+                        <a href="https://twitter.com/intent/tweet?url={{ request.build_absolute_uri }}&text={{ article.title }}" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-twitter me-2"></i> Twitter</a>
+                        <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-linkedin-in me-2"></i> LinkedIn</a>
+                        <a href="mailto:?subject={{ article.title }}&body={{ request.build_absolute_uri }}" class="btn btn-sm btn-outline-dark"><i class="fas fa-envelope me-2"></i> Email</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Related Articles -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <h2 class="display-6 fw-bold mb-5">You May Also Like</h2>
+        
+        <div class="row g-4">
+            <!-- Placeholder for related articles -->
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Healthy Recipes with Dried Fruits">
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2 text-muted small">
+                            <i class="far fa-calendar-alt me-1"></i> January 15, 2023
+                        </div>
+                        <h4 class="card-title">Healthy Recipes with Dried Fruits</h4>
+                        <p class="card-text">Discover delicious and nutritious recipes using our premium dried fruits for a healthy lifestyle.</p>
+                        <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1578554819102-766ba1e9c1fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="The Benefits of Natural Drying Process">
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2 text-muted small">
+                            <i class="far fa-calendar-alt me-1"></i> February 3, 2023
+                        </div>
+                        <h4 class="card-title">The Benefits of Natural Drying Process</h4>
+                        <p class="card-text">Learn about our traditional sun-drying methods that preserve the nutritional value and flavor of our fruits.</p>
+                        <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Sustainable Farming Practices">
+                    </div>
+                    <div class="card-body">
+                        <div class="mb-2 text-muted small">
+                            <i class="far fa-calendar-alt me-1"></i> March 22, 2023
+                        </div>
+                        <h4 class="card-title">Sustainable Farming Practices</h4>
+                        <p class="card-text">Explore how we partner with eco-friendly farms that use sustainable practices to grow the finest fruits.</p>
+                        <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary-custom text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold">Ready to Experience Premium Dried Fruits?</h2>
+                <p class="lead mb-0">Contact us today to place your order or inquire about our products</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

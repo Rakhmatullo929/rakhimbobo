@@ -1,0 +1,300 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 fade-in" data-aos="fade-right">
+                <h1 class="display-4 fw-bold mb-4">Premium Quality<br><span class="text-primary-custom">Dried Fruits</span></h1>
+                <p class="lead mb-4">Experience the authentic taste of nature with our carefully selected and naturally dried fruits. Perfect for healthy snacking and culinary delights.</p>
+                <div class="d-flex flex-wrap gap-3">
+                    <a href="{% url 'core:articles_news' %}" class="btn btn-primary-custom">Explore Products</a>
+                    <a href="{% url 'core:contacts' %}" class="btn btn-outline-primary-custom">Contact Us</a>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
+                <div class="position-relative">
+                    <img src="{% static 'img/fryta.jpg' %}" alt="Dried Fruits" class="img-fluid rounded shadow-lg">
+                    <div class="position-absolute top-0 start-0 translate-middle bg-white p-3 rounded shadow" style="width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;" data-aos="fade-right" data-aos-delay="300">
+                        <span class="text-primary-custom fw-bold" style="font-size: 2rem;">100%</span>
+                        <span class="small">Natural</span>
+                    </div>
+                    <div class="position-absolute bottom-0 end-0 translate-middle bg-white p-3 rounded shadow" style="width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;" data-aos="fade-left" data-aos-delay="500">
+                        <span class="text-primary-custom fw-bold" style="font-size: 2rem;">0%</span>
+                        <span class="small">Additives</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Products Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold">Our Featured Products</h2>
+            <p class="lead text-muted">Discover our selected range of premium dried fruits</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4" data-aos="fade-up">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1621472173504-961ceee36dcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Dried Apricots">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Dried Apricots</h4>
+                        <p class="card-text">Sun-dried apricots with rich flavor and natural sweetness, packed with vitamins and minerals.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1563417095-90c3f04fff69?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Mixed Dried Berries">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Mixed Dried Berries</h4>
+                        <p class="card-text">A delicious mix of cranberries, blueberries, and strawberries, perfect for snacking or baking.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100">
+                    <div class="card-img-container">
+                        <img src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Organic Dates">
+                    </div>
+                    <div class="card-body">
+                        <h4 class="card-title">Organic Dates</h4>
+                        <p class="card-text">Soft and juicy organic Medjool dates, a natural energy booster with caramel-like sweetness.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{% url 'core:articles_news' %}" class="btn btn-primary-custom">View All Products</a>
+        </div>
+    </div>
+</section>
+
+<!-- Benefits Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <img src="https://images.unsplash.com/photo-1567606962952-73303554653b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Health Benefits of Dried Fruits" class="img-fluid rounded shadow">
+            </div>
+            <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
+                <h2 class="display-5 fw-bold mb-4">Health Benefits of Dried Fruits</h2>
+                <div class="mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3">
+                            <i class="fas fa-heart text-white"></i>
+                        </div>
+                        <h5 class="mb-0">Rich in Nutrients</h5>
+                    </div>
+                    <p>Dried fruits are packed with essential vitamins, minerals, and antioxidants that support overall health.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3">
+                            <i class="fas fa-utensils text-white"></i>
+                        </div>
+                        <h5 class="mb-0">Natural Energy Source</h5>
+                    </div>
+                    <p>A perfect snack for quick energy boost, ideal for active lifestyles and physical activities.</p>
+                </div>
+                
+                <div class="mb-4">
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3">
+                            <i class="fas fa-seedling text-white"></i>
+                        </div>
+                        <h5 class="mb-0">High in Fiber</h5>
+                    </div>
+                    <p>Supports digestive health and helps maintain healthy cholesterol levels and blood sugar.</p>
+                </div>
+                
+                <div>
+                    <div class="d-flex align-items-center mb-3">
+                        <div class="bg-primary-custom rounded-circle p-2 me-3">
+                            <i class="fas fa-apple-alt text-white"></i>
+                        </div>
+                        <h5 class="mb-0">Longer Shelf Life</h5>
+                    </div>
+                    <p>Enjoy the benefits of fruits year-round with the convenience of extended storage life.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Latest News & Articles Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold">Latest News & Articles</h2>
+            <p class="lead text-muted">Stay updated with our latest articles, recipes, and news</p>
+        </div>
+        
+        <div class="row g-4">
+            {% if latest_articles %}
+                {% for article in latest_articles %}
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                        <div class="card h-100">
+                            {% if article.image %}
+                                <div class="card-img-container">
+                                    <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+                                </div>
+                            {% endif %}
+                            <div class="card-body">
+                                <div class="mb-2 text-muted small">
+                                    <i class="far fa-calendar-alt me-1"></i> {{ article.created_at|date:"F d, Y" }}
+                                </div>
+                                <h4 class="card-title">{{ article.title }}</h4>
+                                <p class="card-text">{{ article.content|truncatewords:20 }}</p>
+                                <a href="{% url 'core:article_detail' article.slug %}" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <!-- Placeholder content when no articles are available -->
+                <div class="col-md-4" data-aos="fade-up">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Healthy Recipes with Dried Fruits">
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2 text-muted small">
+                                <i class="far fa-calendar-alt me-1"></i> January 15, 2023
+                            </div>
+                            <h4 class="card-title">Healthy Recipes with Dried Fruits</h4>
+                            <p class="card-text">Discover delicious and nutritious recipes using our premium dried fruits for a healthy lifestyle.</p>
+                            <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1578554819102-766ba1e9c1fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="The Benefits of Natural Drying Process">
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2 text-muted small">
+                                <i class="far fa-calendar-alt me-1"></i> February 3, 2023
+                            </div>
+                            <h4 class="card-title">The Benefits of Natural Drying Process</h4>
+                            <p class="card-text">Learn about our traditional sun-drying methods that preserve the nutritional value and flavor of our fruits.</p>
+                            <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100">
+                        <div class="card-img-container">
+                            <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="Sustainable Farming Practices">
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2 text-muted small">
+                                <i class="far fa-calendar-alt me-1"></i> March 22, 2023
+                            </div>
+                            <h4 class="card-title">Sustainable Farming Practices</h4>
+                            <p class="card-text">Explore how we partner with eco-friendly farms that use sustainable practices to grow the finest fruits.</p>
+                            <a href="#" class="text-primary-custom">Read More <i class="fas fa-arrow-right ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+        
+        <div class="text-center mt-5">
+            <a href="{% url 'core:articles_news' %}" class="btn btn-primary-custom">View All Articles</a>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold">What Our Customers Say</h2>
+            <p class="lead text-muted">Read testimonials from our satisfied customers</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">The quality of these dried fruits is exceptional! Fresh, flavorful, and perfect for my daily smoothies and baking. Will definitely order again.</p>
+                                <div>
+                                    <h5 class="mb-1">Emma Thompson</h5>
+                                    <p class="text-muted mb-0">Nutritionist</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">I've tried many dried fruit brands, but Dry Fruta stands out for its pure taste and consistent quality. No added sugars, just natural goodness!</p>
+                                <div>
+                                    <h5 class="mb-1">Michael Chen</h5>
+                                    <p class="text-muted mb-0">Fitness Coach</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">Their customer service is as excellent as their products. Fast delivery and beautifully packaged. These dried fruits have become a staple in my kitchen.</p>
+                                <div>
+                                    <h5 class="mb-1">Sophia Rodriguez</h5>
+                                    <p class="text-muted mb-0">Chef</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-sm mx-1 bg-primary-custom" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="btn btn-sm mx-1 bg-secondary" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="btn btn-sm mx-1 bg-secondary" type="button" data-bs-target="#testimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action Section -->
+<section class="py-5 bg-primary-custom text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold">Ready to Experience Premium Dried Fruits?</h2>
+                <p class="lead mb-0">Contact us today to place your order or inquire about our products</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

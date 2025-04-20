@@ -1,0 +1,301 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Contact Us</h1>
+                <p class="lead text-muted">We'd love to hear from you! Get in touch with our team for any inquiries or feedback</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Details Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-5 mb-5 mb-lg-0" data-aos="fade-right">
+                <h2 class="display-6 fw-bold mb-4">Get In Touch</h2>
+                <p class="lead mb-4">Whether you have questions about our products, partnership opportunities, or anything else, our team is ready to answer all your questions.</p>
+                
+                <div class="mb-4">
+                    <h5 class="mb-3">Contact Information</h5>
+                    <ul class="list-unstyled">
+                        {% if contact_info %}
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Address:</strong><br>
+                                    {{ contact_info.address }}
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    {{ contact_info.phone }}
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    {{ contact_info.email }}
+                                </div>
+                            </li>
+                            {% if contact_info.working_hours %}
+                                <li class="d-flex">
+                                    <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                        <i class="fas fa-clock text-white"></i>
+                                    </div>
+                                    <div>
+                                        <strong>Working Hours:</strong><br>
+                                        {{ contact_info.working_hours }}
+                                    </div>
+                                </li>
+                            {% endif %}
+                        {% else %}
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-map-marker-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Address:</strong><br>
+                                    123 Fruit Street, Healthy City, CA 90210
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-phone text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Phone:</strong><br>
+                                    +1 (123) 456-7890
+                                </div>
+                            </li>
+                            <li class="mb-3 d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-envelope text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Email:</strong><br>
+                                    info@dryfruta.com
+                                </div>
+                            </li>
+                            <li class="d-flex">
+                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
+                                    <i class="fas fa-clock text-white"></i>
+                                </div>
+                                <div>
+                                    <strong>Working Hours:</strong><br>
+                                    Monday-Friday: 9:00 AM - 6:00 PM
+                                </div>
+                            </li>
+                        {% endif %}
+                    </ul>
+                </div>
+                
+                <div class="mb-4">
+                    <h5 class="mb-3">Connect With Us</h5>
+                    <div class="d-flex">
+                        <a href="#" class="social-icon-lg me-2">
+                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fab fa-facebook-f text-white"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-icon-lg me-2">
+                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fab fa-instagram text-white"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-icon-lg me-2">
+                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fab fa-twitter text-white"></i>
+                            </div>
+                        </a>
+                        <a href="#" class="social-icon-lg me-2">
+                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
+                                <i class="fab fa-linkedin-in text-white"></i>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-lg-7" data-aos="fade-left">
+                <div class="card border-0 shadow-sm">
+                    <div class="card-body p-4 p-md-5">
+                        <h3 class="card-title mb-4">Send Us a Message</h3>
+                        <form method="post">
+                            {% csrf_token %}
+                            <div class="row g-3">
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        {{ form.name }}
+                                        <label for="{{ form.name.id_for_label }}">Your Name</label>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-floating mb-3">
+                                        {{ form.email }}
+                                        <label for="{{ form.email.id_for_label }}">Your Email</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        {{ form.subject }}
+                                        <label for="{{ form.subject.id_for_label }}">Subject</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <div class="form-floating mb-3">
+                                        {{ form.message }}
+                                        <label for="{{ form.message.id_for_label }}">Your Message</label>
+                                    </div>
+                                </div>
+                                <div class="col-12">
+                                    <button type="submit" class="btn btn-primary-custom btn-lg">Send Message</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Map Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="display-6 fw-bold mb-5 text-center">Find Us</h2>
+                {% if contact_info and contact_info.map_coordinates %}
+                    <div class="ratio ratio-21x9 rounded shadow overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0738969156646!2d-122.41941484965241!3d37.77492911927263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1617756607346!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                {% else %}
+                    <div class="ratio ratio-21x9 rounded shadow overflow-hidden">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0738969156646!2d-122.41941484965241!3d37.77492911927263!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan%20Francisco%2C%20CA%2C%20USA!5e0!3m2!1sen!2s!4v1617756607346!5m2!1sen!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <h2 class="display-6 fw-bold mb-5 text-center">Frequently Asked Questions</h2>
+                
+                <div class="accordion" id="contactFAQ">
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingOne">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                Do you offer international shipping?
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Yes, we ship our premium dried fruits internationally. Shipping rates and delivery times may vary depending on your location. Please contact our customer service team for specific information about shipping to your country.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingTwo">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                Do your products contain added sugars or preservatives?
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                No, our dried fruits are 100% natural with no added sugars, preservatives, or artificial ingredients. We use traditional drying methods that preserve the natural sweetness and nutritional value of the fruits.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item mb-3 border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingThree">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                What is the shelf life of your dried fruits?
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Our dried fruits typically have a shelf life of 12-18 months when stored properly in a cool, dry place. Once opened, we recommend storing them in an airtight container and consuming within 2-3 months for optimal freshness and flavor.
+                            </div>
+                        </div>
+                    </div>
+                    <div class="accordion-item border-0 shadow-sm rounded">
+                        <h2 class="accordion-header" id="headingFour">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                Do you offer wholesale options for businesses?
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#contactFAQ">
+                            <div class="accordion-body">
+                                Yes, we offer wholesale options for businesses such as health food stores, cafes, restaurants, and food service providers. Please contact our sales team through the form above or email us at wholesale@dryfruta.com for more information about our wholesale program.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="py-5 bg-primary-custom text-white">
+    <div class="container">
+        <div class="row align-items-center justify-content-center">
+            <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
+                <h2 class="fw-bold mb-1">Subscribe to Our Newsletter</h2>
+                <p class="mb-0">Get the latest news, offers, and dried fruit tips delivered to your inbox</p>
+            </div>
+            <div class="col-lg-5">
+                <form>
+                    <div class="input-group">
+                        <input type="email" class="form-control form-control-lg" placeholder="Your Email Address" aria-label="Email Address">
+                        <button class="btn btn-light px-4" type="submit">Subscribe</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .form-floating > .form-control {
+        height: calc(3.5rem + 2px);
+        padding: 1rem 0.75rem;
+    }
+    
+    .form-floating > textarea.form-control {
+        height: 100px;
+    }
+    
+    .accordion-button:not(.collapsed) {
+        color: var(--primary-color);
+        background-color: rgba(112, 174, 84, 0.1);
+    }
+    
+    .accordion-button:focus {
+        border-color: var(--primary-color);
+        box-shadow: 0 0 0 0.25rem rgba(112, 174, 84, 0.25);
+    }
+</style>
+{% endblock %} 

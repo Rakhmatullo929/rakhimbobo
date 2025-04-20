@@ -1,0 +1,100 @@
+# This file contains the translations for Russian language
+# Translations for Dry Fruta website
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-25 10:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: ru\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && n"
+"%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || (n"
+"%100>=11 && n%100<=14)? 2 : 3);\n"
+
+# Navigation and general
+msgid "English"
+msgstr "Английский"
+
+msgid "Russian"
+msgstr "Русский"
+
+msgid "Uzbek"
+msgstr "Узбекский"
+
+msgid "admin/"
+msgstr "админ/"
+
+msgid "Dry Fruta - Premium Dried Fruits"
+msgstr "Dry Fruta - Премиальные Сухофрукты"
+
+msgid "Home"
+msgstr "Главная"
+
+msgid "Articles & News"
+msgstr "Статьи и Новости"
+
+msgid "Partners"
+msgstr "Партнеры"
+
+msgid "Leadership"
+msgstr "Руководство"
+
+msgid "Contact Us"
+msgstr "Контакты"
+
+# Footer
+msgid "Quick Links"
+msgstr "Быстрые ссылки"
+
+msgid "Our Products"
+msgstr "Наши продукты"
+
+msgid "About Us"
+msgstr "О нас"
+
+msgid "Privacy Policy"
+msgstr "Политика конфиденциальности"
+
+msgid "Terms of Service"
+msgstr "Условия использования"
+
+msgid "Contact Information"
+msgstr "Контактная информация"
+
+msgid "123 Dried Fruit Street"
+msgstr "Улица Сухофруктов, 123"
+
+msgid "New York, NY 10001"
+msgstr "Нью-Йорк, 10001"
+
+msgid "Email: info@dryfruta.com"
+msgstr "Email: info@dryfruta.com"
+
+msgid "Phone: +1 (555) 123-4567"
+msgstr "Телефон: +1 (555) 123-4567"
+
+msgid "Hours of Operation"
+msgstr "Часы работы"
+
+msgid "Monday - Friday: 9:00 AM - 6:00 PM"
+msgstr "Понедельник - Пятница: 9:00 - 18:00"
+
+msgid "Saturday: 10:00 AM - 4:00 PM"
+msgstr "Суббота: 10:00 - 16:00"
+
+msgid "Sunday: Closed"
+msgstr "Воскресенье: Закрыто"
+
+msgid "All rights reserved."
+msgstr "Все права защищены."
+
+msgid "Providing premium quality dried fruits sourced from the best farms around the world. Healthy snacks for a balanced lifestyle."
+msgstr "Предлагаем премиальные сухофрукты, полученные с лучших ферм по всему миру. Полезные закуски для сбалансированного образа жизни."
+
+msgid "Copyright"
+msgstr "Авторское право" 

@@ -1,0 +1,236 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8 mx-auto text-center">
+                <h1 class="display-4 fw-bold mb-4">Our Partners</h1>
+                <p class="lead text-muted">Meet the premium farms and organizations we work with to deliver the finest dried fruits</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Partners Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="row g-4">
+            {% if partners %}
+                {% for partner in partners %}
+                    <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                        <div class="card h-100 border-0 shadow-sm">
+                            <div class="card-body p-4 text-center">
+                                <div class="mb-4">
+                                    {% if partner.logo %}
+                                        <img src="{{ partner.logo.url }}" alt="{{ partner.name }}" class="img-fluid mb-3" style="max-height: 120px;">
+                                    {% else %}
+                                        <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                            <span class="text-primary-custom display-4 fw-bold">{{ partner.name|first }}</span>
+                                        </div>
+                                    {% endif %}
+                                    <h4 class="card-title">{{ partner.name }}</h4>
+                                </div>
+                                <p class="card-text">{{ partner.description|default:"A valued partner of Dry Fruta, contributing to our mission of delivering premium quality dried fruits." }}</p>
+                                {% if partner.website %}
+                                    <a href="{{ partner.website }}" target="_blank" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                                {% endif %}
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+            {% else %}
+                <!-- Placeholder content when no partners are available -->
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">O</span>
+                                </div>
+                                <h4 class="card-title">Organic Harvest Farms</h4>
+                            </div>
+                            <p class="card-text">A certified organic farm that supplies us with premium quality apricots, peaches, and apples. Their sustainable farming practices ensure the finest fruits for our drying process.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">G</span>
+                                </div>
+                                <h4 class="card-title">Golden Valley Berries</h4>
+                            </div>
+                            <p class="card-text">Specialists in growing the finest berries, Golden Valley provides us with cranberries, blueberries, and strawberries. Their expert knowledge ensures optimal flavor and nutritional value.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">T</span>
+                                </div>
+                                <h4 class="card-title">Tropical Delight Plantations</h4>
+                            </div>
+                            <p class="card-text">Our source for exotic tropical fruits like mangoes, pineapples, and bananas. Their family-owned plantations in tropical regions ensure the authentic taste of sun-ripened fruits.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">M</span>
+                                </div>
+                                <h4 class="card-title">Mediterranean Date Gardens</h4>
+                            </div>
+                            <p class="card-text">Specialists in date cultivation, Mediterranean Date Gardens provides us with the finest Medjool and Deglet Noor dates from their ancient groves in traditional date-growing regions.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">E</span>
+                                </div>
+                                <h4 class="card-title">EcoPackage Solutions</h4>
+                            </div>
+                            <p class="card-text">Our packaging partner committed to sustainability. They provide eco-friendly, recyclable packaging solutions that help us reduce our environmental footprint while keeping our fruits fresh.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-4 text-center">
+                            <div class="mb-4">
+                                <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
+                                    <span class="text-primary-custom display-4 fw-bold">N</span>
+                                </div>
+                                <h4 class="card-title">Natural Nutrition Institute</h4>
+                            </div>
+                            <p class="card-text">A research partner that helps us analyze and maximize the nutritional value of our dried fruits. Their expertise ensures our products maintain optimal vitamin and mineral content.</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                        </div>
+                    </div>
+                </div>
+            {% endif %}
+        </div>
+    </div>
+</section>
+
+<!-- Become a Partner Section -->
+<section class="section-padding bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+                <h2 class="display-5 fw-bold mb-4">Become a Partner</h2>
+                <p class="lead mb-4">Ready to explore how we can work together? Reach out to our partnership team today.</p>
+                <ul class="list-unstyled mb-4">
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Access to a growing market of health-conscious consumers</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Stable, long-term business relationship</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Fair trade practices and transparent pricing</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Support for sustainable farming practices</li>
+                    <li><i class="fas fa-check-circle text-primary-custom me-2"></i> Joint marketing opportunities</li>
+                </ul>
+                <a href="{% url 'core:contacts' %}" class="btn btn-primary-custom btn-lg">Contact Us About Partnership</a>
+            </div>
+            <div class="col-lg-6" data-aos="fade-left">
+                <img src="https://images.unsplash.com/photo-1529693662653-9d480530a697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Partnership" class="img-fluid rounded shadow">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials Section -->
+<section class="section-padding">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold">What Our Partners Say</h2>
+            <p class="lead text-muted">Hear from the farms and organizations that work with us</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div id="partnerTestimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">"Working with Dry Fruta has been a game-changer for our farm. Their commitment to quality and fair pricing has allowed us to invest in sustainable practices while growing our business."</p>
+                                <div>
+                                    <h5 class="mb-1">David Rodriguez</h5>
+                                    <p class="text-muted mb-0">Organic Harvest Farms</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">"As a family-owned berry farm, finding reliable partners is crucial. Dry Fruta's consistent orders and respect for our growing practices have made them an ideal partner for our premium berries."</p>
+                                <div>
+                                    <h5 class="mb-1">Sarah Johnson</h5>
+                                    <p class="text-muted mb-0">Golden Valley Berries</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="carousel-item">
+                            <div class="p-5 bg-white rounded shadow text-center" data-aos="fade-up">
+                                <div class="mb-4">
+                                    <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
+                                </div>
+                                <p class="lead mb-4">"The partnership with Dry Fruta has allowed us to showcase our eco-friendly packaging solutions. Their commitment to sustainability aligns perfectly with our mission to reduce plastic waste in the food industry."</p>
+                                <div>
+                                    <h5 class="mb-1">Michael Chang</h5>
+                                    <p class="text-muted mb-0">EcoPackage Solutions</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="d-flex justify-content-center mt-4">
+                        <button class="btn btn-sm mx-1 bg-primary-custom" type="button" data-bs-target="#partnerTestimonialCarousel" data-bs-slide-to="0" aria-current="true" aria-label="Slide 1"></button>
+                        <button class="btn btn-sm mx-1 bg-secondary" type="button" data-bs-target="#partnerTestimonialCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                        <button class="btn btn-sm mx-1 bg-secondary" type="button" data-bs-target="#partnerTestimonialCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Call to Action -->
+<section class="py-5 bg-primary-custom text-white">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-8 mb-4 mb-lg-0">
+                <h2 class="display-5 fw-bold">Interested in Partnering with Us?</h2>
+                <p class="lead mb-0">Contact us today to discuss partnership opportunities</p>
+            </div>
+            <div class="col-lg-4 text-lg-end">
+                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">Get in Touch <i class="fas fa-arrow-right ms-2"></i></a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %} 

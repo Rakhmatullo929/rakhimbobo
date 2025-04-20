@@ -1,0 +1,98 @@
+# This file contains the translations for Uzbek language
+# Translations for Dry Fruta website
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2023-09-25 10:27+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: uz\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# Navigation and general
+msgid "English"
+msgstr "Ingliz"
+
+msgid "Russian"
+msgstr "Rus"
+
+msgid "Uzbek"
+msgstr "O'zbek"
+
+msgid "admin/"
+msgstr "admin/"
+
+msgid "Dry Fruta - Premium Dried Fruits"
+msgstr "Dry Fruta - Premium Quritilgan Mevalar"
+
+msgid "Home"
+msgstr "Asosiy"
+
+msgid "Articles & News"
+msgstr "Maqolalar va Yangiliklar"
+
+msgid "Partners"
+msgstr "Hamkorlar"
+
+msgid "Leadership"
+msgstr "Rahbariyat"
+
+msgid "Contact Us"
+msgstr "Biz bilan bog'laning"
+
+# Footer
+msgid "Quick Links"
+msgstr "Tezkor havolalar"
+
+msgid "Our Products"
+msgstr "Bizning mahsulotlar"
+
+msgid "About Us"
+msgstr "Biz haqimizda"
+
+msgid "Privacy Policy"
+msgstr "Maxfiylik siyosati"
+
+msgid "Terms of Service"
+msgstr "Xizmat ko'rsatish shartlari"
+
+msgid "Contact Information"
+msgstr "Aloqa ma'lumotlari"
+
+msgid "123 Dried Fruit Street"
+msgstr "Quritilgan Meva ko'chasi, 123"
+
+msgid "New York, NY 10001"
+msgstr "Nyu-York, 10001"
+
+msgid "Email: info@dryfruta.com"
+msgstr "Email: info@dryfruta.com"
+
+msgid "Phone: +1 (555) 123-4567"
+msgstr "Telefon: +1 (555) 123-4567"
+
+msgid "Hours of Operation"
+msgstr "Ish vaqti"
+
+msgid "Monday - Friday: 9:00 AM - 6:00 PM"
+msgstr "Dushanba - Juma: 9:00 - 18:00"
+
+msgid "Saturday: 10:00 AM - 4:00 PM"
+msgstr "Shanba: 10:00 - 16:00"
+
+msgid "Sunday: Closed"
+msgstr "Yakshanba: Yopiq"
+
+msgid "All rights reserved."
+msgstr "Barcha huquqlar himoyalangan."
+
+msgid "Providing premium quality dried fruits sourced from the best farms around the world. Healthy snacks for a balanced lifestyle."
+msgstr "Dunyoning eng yaxshi fermalaridan olingan yuqori sifatli quritilgan mevalarni taqdim etamiz. Sog'lom turmush tarzi uchun foydali gazaklar."
+
+msgid "Copyright"
+msgstr "Mualliflik huquqi" 
