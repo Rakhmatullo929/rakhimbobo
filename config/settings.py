@@ -26,7 +26,7 @@ SECRET_KEY = "django-insecure-@#@kn9%nkq)2^1z_0*#-mc^(iz8@+cheeo)$2y+j5tl_np9ea*
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'dryfruta.com', 'www.dryfruta.com']
 
 
 # Application definition
@@ -38,6 +38,10 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django.contrib.sitemaps",
+    
+    # Third-party apps
+    # "compressor.apps.CompressorConfig",
     
     # Local apps
     "core.apps.CoreConfig",
@@ -52,7 +56,14 @@ MIDDLEWARE = [
     "django.contrib.auth.middleware.AuthenticationMiddleware",
     "django.contrib.messages.middleware.MessageMiddleware",
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
+    # "htmlmin.middleware.HtmlMinifyMiddleware",
+    # "htmlmin.middleware.MarkRequestMiddleware",
 ]
+
+# HTML Minification
+# HTML_MINIFY = True
+# KEEP_COMMENTS_ON_MINIFYING = False
+# EXCLUDE_FROM_MINIFYING = ('/admin/', '/summernote/')
 
 ROOT_URLCONF = "config.urls"
 
@@ -142,7 +153,22 @@ LANGUAGES = [
 
 STATIC_URL = "static/"
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
-STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
+# Django Compressor for CSS/JS optimization
+# STATICFILES_FINDERS = [
+#     'django.contrib.staticfiles.finders.FileSystemFinder',
+#     'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+#     'compressor.finders.CompressorFinder',
+# ]
+# COMPRESS_ENABLED = True
+# COMPRESS_CSS_FILTERS = [
+#     'compressor.filters.css_default.CssAbsoluteFilter',
+#     'compressor.filters.cssmin.rCSSMinFilter',
+# ]
+# COMPRESS_JS_FILTERS = [
+#     'compressor.filters.jsmin.JSMinFilter',
+# ]
 
 # Media files
 MEDIA_URL = '/media/'
@@ -152,6 +178,9 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+
+# SEO Settings
+SITE_ID = 1
 
 # Messages
 from django.contrib.messages import constants as messages

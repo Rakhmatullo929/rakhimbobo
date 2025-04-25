@@ -1,4 +1,47 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ news_item.title }} | Dry Fruta News{% endblock %}
+{% block meta_description %}{{ news_item.content|truncatewords:30 }}{% endblock %}
+{% block meta_keywords %}{{ news_item.title|lower }}, dried fruits news, organic fruit news, dry fruit company, {{ news_item.tags|join:", "|lower }}{% endblock %}
+
+{% block og_title %}{{ news_item.title }} | Dry Fruta News{% endblock %}
+{% block og_description %}{{ news_item.content|truncatewords:30 }}{% endblock %}
+{% block og_image %}{% if news_item.image %}{{ request.scheme }}://{{ request.get_host }}{{ news_item.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}{% endblock %}
+
+{% block twitter_title %}{{ news_item.title }} | Dry Fruta News{% endblock %}
+{% block twitter_description %}{{ news_item.content|truncatewords:30 }}{% endblock %}
+{% block twitter_image %}{% if news_item.image %}{{ request.scheme }}://{{ request.get_host }}{{ news_item.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "NewsArticle",
+  "headline": "{{ news_item.title }}",
+  "image": "{% if news_item.image %}{{ request.scheme }}://{{ request.get_host }}{{ news_item.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}",
+  "datePublished": "{{ news_item.created_at|date:'c' }}",
+  "dateModified": "{{ news_item.updated_at|date:'c' }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Dry Fruta"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dry Fruta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/logo.png' %}"
+    }
+  },
+  "description": "{{ news_item.content|truncatewords:30 }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.build_absolute_uri }}"
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <section class="py-5">

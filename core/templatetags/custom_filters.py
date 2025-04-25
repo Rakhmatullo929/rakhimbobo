@@ -15,3 +15,10 @@ def multiply(value, arg):
         return int(value) * int(arg)
     except (ValueError, TypeError):
         return '' 
+
+@register.filter(name='split')
+def split(value, arg):
+    """Splits the value by the argument"""
+    if value is None:
+        return []
+    return value.split(arg) 

@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://www.dryfruta.com/sitemap.xml
+
+# Disallow specific private areas
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /private/ 

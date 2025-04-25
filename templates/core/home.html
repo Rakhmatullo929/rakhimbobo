@@ -1,5 +1,76 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load custom_filters %}
+
+{% block meta_title %}Dry Fruta - Premium Organic Dried Fruits & Healthy Natural Snacks{% endblock %}
+{% block meta_description %}Discover our premium collection of organic dried fruits with no additives. We offer natural dried apricots, dates, berries, and more for healthy snacking. Free shipping on orders over $50.{% endblock %}
+{% block meta_keywords %}premium dried fruits, organic dried fruits, natural dried fruit, healthy snacks, dried apricots, dried dates, dried berries, no additives, healthy food, premium quality, organic snacks{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Dry Fruta - Premium Organic Dried Fruits & Healthy Natural Snacks",
+  "description": "Discover our premium collection of organic dried fruits with no additives. We offer natural dried apricots, dates, berries, and more for healthy snacking.",
+  "mainEntity": {
+    "@type": "Store",
+    "name": "Dry Fruta",
+    "image": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/logo.png' %}",
+    "description": "Premium quality dried fruits with no additives",
+    "telephone": "{% if global_contact_info %}{{ global_contact_info.phone }}{% else %}+1 (123) 456-7890{% endif %}",
+    "email": "{% if global_contact_info %}{{ global_contact_info.email }}{% else %}info@dryfruta.com{% endif %}",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "{% if global_contact_info %}{{ global_contact_info.address }}{% else %}123 Fruit Street{% endif %}",
+      "addressLocality": "{% if global_contact_info %}{{ global_contact_info.address|split:', '|last }}{% else %}Healthy City{% endif %}",
+      "addressCountry": "{% if global_contact_info %}{{ global_contact_info.address|split:', '|last }}{% else %}US{% endif %}"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "40.7128",
+      "longitude": "-74.0060"
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+      "opens": "09:00",
+      "closes": "18:00"
+    },
+    "priceRange": "$$",
+    "offers": [
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Dried Apricots",
+          "description": "Sun-dried apricots with rich flavor and natural sweetness, packed with vitamins and minerals.",
+          "image": "https://images.unsplash.com/photo-1621472173504-961ceee36dcc"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Mixed Dried Berries",
+          "description": "A delicious mix of cranberries, blueberries, and strawberries, perfect for snacking or baking.",
+          "image": "https://images.unsplash.com/photo-1563417095-90c3f04fff69"
+        }
+      },
+      {
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Product",
+          "name": "Organic Dates",
+          "description": "Soft and juicy organic Medjool dates, a natural energy booster with caramel-like sweetness.",
+          "image": "https://images.unsplash.com/photo-1608797178974-15b35a64ede9"
+        }
+      }
+    ]
+  }
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <!-- Hero Section -->

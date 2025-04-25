@@ -1,4 +1,48 @@
 {% extends 'base.html' %}
+{% load static %}
+
+{% block meta_title %}{{ article.title }} | Dry Fruta Blog{% endblock %}
+{% block meta_description %}{{ article.content|truncatewords:30 }}{% endblock %}
+{% block meta_keywords %}{{ article.title|lower }}, dried fruits, organic snacks, healthy eating, {{ article.tags|join:", "|lower }}{% endblock %}
+
+{% block og_title %}{{ article.title }} | Dry Fruta Blog{% endblock %}
+{% block og_description %}{{ article.content|truncatewords:30 }}{% endblock %}
+{% block og_image %}{% if article.image %}{{ request.scheme }}://{{ request.get_host }}{{ article.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}{% endblock %}
+
+{% block twitter_title %}{{ article.title }} | Dry Fruta Blog{% endblock %}
+{% block twitter_description %}{{ article.content|truncatewords:30 }}{% endblock %}
+{% block twitter_image %}{% if article.image %}{{ request.scheme }}://{{ request.get_host }}{{ article.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}{% endblock %}
+
+{% block structured_data %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "{{ article.title }}",
+  "image": "{% if article.image %}{{ request.scheme }}://{{ request.get_host }}{{ article.image.url }}{% else %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endif %}",
+  "datePublished": "{{ article.created_at|date:'c' }}",
+  "dateModified": "{{ article.updated_at|date:'c' }}",
+  "author": {
+    "@type": "Organization",
+    "name": "Dry Fruta"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "Dry Fruta",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/logo.png' %}"
+    }
+  },
+  "description": "{{ article.content|truncatewords:30 }}",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "{{ request.build_absolute_uri }}"
+  },
+  "keywords": "{{ article.title|lower }}, dried fruits, organic snacks, healthy eating{% if article.tags %}, {{ article.tags|join:", "|lower }}{% endif %}"
+}
+</script>
+{% endblock %}
 
 {% block content %}
 <section class="py-5">

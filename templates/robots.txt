@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: {{ request.scheme }}://{{ request.get_host }}/sitemap.xml
+
+# Disallow specific private areas
+Disallow: /admin/
+Disallow: /accounts/
+Disallow: /private/ 

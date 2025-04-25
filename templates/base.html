@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 {% load static %}
 {% load i18n %}
+{% load custom_filters %}
+{# {% load compress %} #}
 <html lang="{{ LANGUAGE_CODE }}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block title %}{{ title|default:_("Dry Fruta - Premium Dried Fruits") }}{% endblock %}</title>
     
+    <!-- Primary Meta Tags -->
+    <title>{% block title %}{{ title|default:_("Dry Fruta - Premium Dried Fruits & Natural Snacks") }}{% endblock %}</title>
+    <meta name="title" content="{% block meta_title %}{{ title|default:_("Dry Fruta - Premium Dried Fruits & Natural Snacks") }}{% endblock %}">
+    <meta name="description" content="{% block meta_description %}{{ description|default:_("Premium quality natural dried fruits with no additives. Shop our selection of organic apricots, dates, berries and more. Worldwide shipping available.") }}{% endblock %}">
+    <meta name="keywords" content="{% block meta_keywords %}dried fruits, organic dried fruits, natural snacks, healthy snacks, premium dried fruits, dried apricots, dried dates, dried berries, no additives, healthy food{% endblock %}">
+    <meta name="author" content="Dry Fruta">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="{{ request.build_absolute_uri }}">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="{{ request.build_absolute_uri }}">
+    <meta property="og:title" content="{% block og_title %}{{ title|default:_("Dry Fruta - Premium Dried Fruits & Natural Snacks") }}{% endblock %}">
+    <meta property="og:description" content="{% block og_description %}{{ description|default:_("Premium quality natural dried fruits with no additives. Shop our selection of organic apricots, dates, berries and more. Worldwide shipping available.") }}{% endblock %}">
+    <meta property="og:image" content="{% block og_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endblock %}">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="{{ request.build_absolute_uri }}">
+    <meta property="twitter:title" content="{% block twitter_title %}{{ title|default:_("Dry Fruta - Premium Dried Fruits & Natural Snacks") }}{% endblock %}">
+    <meta property="twitter:description" content="{% block twitter_description %}{{ description|default:_("Premium quality natural dried fruits with no additives. Shop our selection of organic apricots, dates, berries and more. Worldwide shipping available.") }}{% endblock %}">
+    <meta property="twitter:image" content="{% block twitter_image %}{{ request.scheme }}://{{ request.get_host }}{% static 'img/og-image.jpg' %}{% endblock %}">
+    
+    <!-- Language Alternates -->
+    <link rel="alternate" hreflang="en" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}?lang=en">
+    <link rel="alternate" hreflang="ru" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}?lang=ru">
+    <link rel="alternate" hreflang="uz" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}?lang=uz">
+    <link rel="alternate" hreflang="x-default" href="{{ request.scheme }}://{{ request.get_host }}{{ request.path }}">
+    
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicon/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicon/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicon/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicon/site.webmanifest' %}">
+    
+    {# {% compress css %} #}
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -273,8 +311,38 @@
             align-items: center;
         }
     </style>
+    {# {% endcompress %} #}
     
     {% block extra_css %}{% endblock %}
+    
+    <!-- Structured Data / JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Dry Fruta",
+      "url": "{{ request.scheme }}://{{ request.get_host }}/",
+      "logo": "{{ request.scheme }}://{{ request.get_host }}{% static 'img/logo.png' %}",
+      "sameAs": [
+        "https://www.instagram.com/dry_frutta/",
+        "http://t.me/dry_frutta_rakhimbobo",
+        "https://www.youtube.com/@rakhimbobodryfrutta-f1m"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "{% if global_contact_info %}{{ global_contact_info.phone }}{% else %}+1 (123) 456-7890{% endif %}",
+        "contactType": "customer service"
+      },
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "{% if global_contact_info %}{{ global_contact_info.address }}{% else %}123 Fruit Street{% endif %}",
+        "addressLocality": "{% if global_contact_info %}{{ global_contact_info.address|split:', '|last }}{% else %}Healthy City{% endif %}",
+        "addressCountry": "{% if global_contact_info %}{{ global_contact_info.address|split:', '|last }}{% else %}US{% endif %}"
+      }
+    }
+    </script>
+    
+    {% block structured_data %}{% endblock %}
 </head>
 <body>
     <!-- Vanta.js background -->
@@ -284,7 +352,7 @@
     <nav class="navbar navbar-expand-lg sticky-top py-3">
         <div class="container">
             <a class="navbar-brand" href="{% url 'core:home' %}">
-                <img src="{% static 'img/logo.png' %}" alt="Dry Fruta" style="width: 100px; height: 100px;">
+                <img src="{% static 'img/logo.png' %}" alt="Dry Fruta" width="100" height="100">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -403,6 +471,7 @@
         </div>
     </footer>
     
+    {# {% compress js %} #}
     <!-- Bootstrap JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
@@ -440,6 +509,7 @@
             zoom: 0.60
         });
     </script>
+    {# {% endcompress %} #}
     
     {% block extra_js %}{% endblock %}
 </body>
