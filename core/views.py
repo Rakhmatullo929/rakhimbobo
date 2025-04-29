@@ -1,6 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
 from django.contrib import messages
-from .models import Article, News, Partner, TeamMember, Contact, ContactMessage
+from django.http import JsonResponse
+from .models import Article, News, Partner, TeamMember, Contact, ContactMessage, Product
 from .forms import ContactMessageForm
 
 def home(request):
@@ -88,3 +89,34 @@ def contacts(request):
         'title': 'Contact Us - Dry Fruta',
     }
     return render(request, 'core/contacts.html', context)
+
+def products(request):
+    products_list = Product.objects.filter(is_available=True)
+    
+    context = {
+        'products': products_list,
+        'title': 'Our Products - Dry Fruta',
+    }
+    return render(request, 'core/products.html', context)
+
+def product_detail(request, id):
+    product = get_object_or_404(Product, id=id, is_available=True)
+    
+    if request.headers.get('x-requested-with') == 'XMLHttpRequest':
+        # Return JSON for modal
+        product_data = {
+            'id': product.id,
+            'name': product.name,
+            'description': product.description,
+            'price': float(product.price),
+            'image': product.image.url if product.image else None,
+            'is_new': product.is_new,
+        }
+        return JsonResponse(product_data)
+    
+    # Regular view (fallback)
+    context = {
+        'product': product,
+        'title': f'{product.name} - Dry Fruta',
+    }
+    return render(request, 'core/product_detail.html', context)

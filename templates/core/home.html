@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load static %}
 {% load custom_filters %}
+{% load i18n %}
 
 {% block meta_title %}Dry Fruta - Premium Organic Dried Fruits & Healthy Natural Snacks{% endblock %}
 {% block meta_description %}Discover our premium collection of organic dried fruits with no additives. We offer natural dried apricots, dates, berries, and more for healthy snacking. Free shipping on orders over $50.{% endblock %}
@@ -87,14 +88,14 @@
             </div>
             <div class="col-lg-6 mt-5 mt-lg-0" data-aos="fade-left">
                 <div class="position-relative">
-                    <img src="{% static 'img/fryta.jpg' %}" alt="Dried Fruits" class="img-fluid rounded shadow-lg">
+                    <img src="{% static 'img/outside2.png' %}" alt="Dried Fruits" class="img-fluid rounded shadow-lg">
                     <div class="position-absolute top-0 start-0 translate-middle bg-white p-3 rounded shadow" style="width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;" data-aos="fade-right" data-aos-delay="300">
                         <span class="text-primary-custom fw-bold" style="font-size: 2rem;">100%</span>
-                        <span class="small">Natural</span>
+                        <span class="small">{% trans "Natural" %}</span>
                     </div>
-                    <div class="position-absolute bottom-0 end-0 translate-middle bg-white p-3 rounded shadow" style="width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center;" data-aos="fade-left" data-aos-delay="500">
+                    <div class="position-absolute bottom-0 end-0 translate-middle-x translate-middle-y bg-white p-3 rounded shadow" style="width: 120px; height: 120px; display: flex; flex-direction: column; justify-content: center; align-items: center; transform: translate(20%, 20%);" data-aos="fade-left" data-aos-delay="500">
                         <span class="text-primary-custom fw-bold" style="font-size: 2rem;">0%</span>
-                        <span class="small">Additives</span>
+                        <span class="small">{% trans "Additives" %}</span>
                     </div>
                 </div>
             </div>
@@ -159,7 +160,7 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <img src="https://images.unsplash.com/photo-1567606962952-73303554653b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Health Benefits of Dried Fruits" class="img-fluid rounded shadow">
+                <img src="{% static 'img/inside2.png' %}" alt="Health Benefits of Dried Fruits" class="img-fluid rounded shadow">
             </div>
             <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
                 <h2 class="display-5 fw-bold mb-4">Health Benefits of Dried Fruits</h2>

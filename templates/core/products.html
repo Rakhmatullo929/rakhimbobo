@@ -1,0 +1,165 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load i18n %}
+
+{% block title %}{{ title }}{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="content">
+                    <h1>{% trans "Our Products" %}</h1>
+                    <p>{% trans "Explore our premium selection of high-quality dried fruits" %}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Products Section -->
+<section class="products-section">
+    <div class="container">
+        <div class="row">
+            {% for product in products %}
+            <div class="col-md-4 mb-4">
+                <div class="card product-card">
+                    {% if product.is_new %}
+                    <span class="badge bg-success position-absolute top-0 end-0 m-2">{% trans "NEW" %}</span>
+                    {% endif %}
+                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ product.name }}</h5>
+                        <p class="card-text price">${{ product.price }}</p>
+                        <button class="btn btn-primary view-product" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="{{ product.id }}">
+                            {% trans "View Details" %}
+                        </button>
+                    </div>
+                </div>
+            </div>
+            {% empty %}
+            <div class="col-12 text-center">
+                <p>{% trans "No products available at the moment. Please check back later." %}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Product Modal -->
+<div class="modal fade" id="productModal" tabindex="-1" aria-labelledby="productModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="productModalLabel">{% trans "Product Details" %}</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="" id="modal-product-image" class="img-fluid rounded" alt="Product Image">
+                        <div class="mt-2" id="modal-product-new-badge">
+                            <span class="badge bg-success">{% trans "NEW" %}</span>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <h3 id="modal-product-name"></h3>
+                        <p class="price" id="modal-product-price"></p>
+                        <div id="modal-product-description"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Event listener for product detail buttons
+        document.querySelectorAll('.view-product').forEach(button => {
+            button.addEventListener('click', function() {
+                const productId = this.getAttribute('data-product-id');
+                
+                // Make AJAX request to get product details
+                fetch(`/product/${productId}/`, {
+                    headers: {
+                        'X-Requested-With': 'XMLHttpRequest'
+                    }
+                })
+                .then(response => response.json())
+                .then(data => {
+                    // Update modal with product data
+                    document.getElementById('modal-product-name').textContent = data.name;
+                    document.getElementById('modal-product-price').textContent = `$${data.price.toFixed(2)}`;
+                    document.getElementById('modal-product-description').innerHTML = data.description;
+                    document.getElementById('modal-product-image').src = data.image;
+                    
+                    // Show or hide the "NEW" badge
+                    if (data.is_new) {
+                        document.getElementById('modal-product-new-badge').style.display = 'block';
+                    } else {
+                        document.getElementById('modal-product-new-badge').style.display = 'none';
+                    }
+                })
+                .catch(error => {
+                    console.error('Error fetching product details:', error);
+                });
+            });
+        });
+    });
+</script>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+    .product-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        height: 100%;
+        position: relative;
+    }
+    
+    .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    }
+    
+    .product-card img {
+        height: 250px;
+        object-fit: cover;
+    }
+    
+    .price {
+        font-size: 1.25rem;
+        font-weight: bold;
+        color: #e67e22;
+    }
+    
+    .products-section {
+        padding: 80px 0;
+    }
+    
+    .page-header {
+        background-color: #f8f9fa;
+        padding: 60px 0;
+        text-align: center;
+        margin-bottom: 0;
+    }
+    
+    .page-header h1 {
+        margin-bottom: 15px;
+        color: #333;
+    }
+    
+    .page-header p {
+        color: #666;
+        font-size: 1.1rem;
+    }
+</style>
+{% endblock %} 

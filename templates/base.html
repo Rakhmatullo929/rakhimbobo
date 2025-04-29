@@ -352,7 +352,8 @@
     <nav class="navbar navbar-expand-lg sticky-top py-3">
         <div class="container">
             <a class="navbar-brand" href="{% url 'core:home' %}">
-                <img src="{% static 'img/logo.png' %}" alt="Dry Fruta" width="100" height="100">
+                <img src="{% static 'img/newlogo.png' %}" alt="Dry Fruta" width="130" height="130">
+                
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -370,6 +371,9 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if 'leadership' in request.path %}active{% endif %}" href="{% url 'core:leadership' %}">{% trans "Leadership" %}</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link {% if 'products' in request.path %}active{% endif %}" href="{% url 'core:products' %}">{% trans "Products" %}</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link {% if 'contacts' in request.path %}active{% endif %}" href="{% url 'core:contacts' %}">{% trans "Contact Us" %}</a>
@@ -422,10 +426,10 @@
                     <h4 class="mb-4">{% trans "Dry Fruta" %}</h4>
                     <p>{% trans "Providing premium quality dried fruits sourced from the best farms around the world. Healthy snacks for a balanced lifestyle." %}</p>
                     <div class="mt-3">
-                        <a href="#" class="social-icon"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon text-decoration-none"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-decoration-none"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-icon text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
                     </div>
                 </div>
                 <div class="col-lg-3 mb-4">
@@ -435,6 +439,7 @@
                         <li class="mb-2"><a href="{% url 'core:articles_news' %}" class="footer-link">{% trans "Articles & News" %}</a></li>
                         <li class="mb-2"><a href="{% url 'core:partners' %}" class="footer-link">{% trans "Partners" %}</a></li>
                         <li class="mb-2"><a href="{% url 'core:leadership' %}" class="footer-link">{% trans "Leadership" %}</a></li>
+                        <li class="mb-2"><a href="{% url 'core:products' %}" class="footer-link">{% trans "Products" %}</a></li>
                         <li class="mb-2"><a href="{% url 'core:contacts' %}" class="footer-link">{% trans "Contact Us" %}</a></li>
                     </ul>
                 </div>

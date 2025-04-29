@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import Article, News, Partner, TeamMember, Contact, ContactMessage
+from .models import Article, News, Partner, TeamMember, Contact, ContactMessage, Product
+from modeltranslation.admin import TranslationAdmin
+
 
 @admin.register(Article)
-class ArticleAdmin(admin.ModelAdmin):
+class ArticleAdmin(TranslationAdmin):
     list_display = ('title', 'created_at', 'is_published')
     list_filter = ('is_published', 'created_at')
     search_fields = ('title', 'content')
@@ -10,7 +12,7 @@ class ArticleAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_at'
 
 @admin.register(News)
-class NewsAdmin(admin.ModelAdmin):
+class NewsAdmin(TranslationAdmin):
     list_display = ('title', 'created_at', 'is_published')
     list_filter = ('is_published', 'created_at')
     search_fields = ('title', 'content')
@@ -18,13 +20,13 @@ class NewsAdmin(admin.ModelAdmin):
     date_hierarchy = 'created_at'
 
 @admin.register(Partner)
-class PartnerAdmin(admin.ModelAdmin):
+class PartnerAdmin(TranslationAdmin):
     list_display = ('name', 'website', 'order')
     list_editable = ('order',)
     search_fields = ('name', 'description')
 
 @admin.register(TeamMember)
-class TeamMemberAdmin(admin.ModelAdmin):
+class TeamMemberAdmin(TranslationAdmin):
     list_display = ('name', 'position', 'order')
     list_filter = ('position',)
     list_editable = ('order',)
@@ -41,3 +43,11 @@ class ContactMessageAdmin(admin.ModelAdmin):
     search_fields = ('name', 'email', 'subject', 'message')
     date_hierarchy = 'created_at'
     readonly_fields = ('name', 'email', 'subject', 'message', 'created_at')
+
+@admin.register(Product)
+class ProductAdmin(TranslationAdmin):
+    list_display = ('name', 'price', 'is_new', 'is_available', 'created_at')
+    list_filter = ('is_new', 'is_available', 'created_at')
+    search_fields = ('name', 'description')
+    prepopulated_fields = {'slug': ('name',)}
+    date_hierarchy = 'created_at'

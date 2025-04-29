@@ -95,4 +95,269 @@ msgid "Providing premium quality dried fruits sourced from the best farms around
 msgstr "Dunyoning eng yaxshi fermalaridan olingan yuqori sifatli quritilgan mevalarni taqdim etamiz. Sog'lom turmush tarzi uchun foydali gazaklar."
 
 msgid "Copyright"
-msgstr "Mualliflik huquqi" 
+msgstr "Mualliflik huquqi"
+
+# Additional translations
+msgid "Stay updated with our latest articles, recipes, and industry news"
+msgstr "Bizning eng so'nggi maqolalarimiz, retseptlarimiz va soha yangiliklari bilan tanishib boring"
+
+msgid "Recent Articles"
+msgstr "So'nggi maqolalar"
+
+msgid "Read More"
+msgstr "Batafsil"
+
+msgid "No articles have been published yet. Please check back later!"
+msgstr "Hali maqolalar chop etilmagan. Iltimos, keyinroq qayta tekshiring!"
+
+msgid "Latest News"
+msgstr "So'nggi yangiliklar"
+
+msgid "No news items have been published yet. Please check back later!"
+msgstr "Hali yangiliklar chop etilmagan. Iltimos, keyinroq qayta tekshiring!"
+
+msgid "Stay Updated!"
+msgstr "Yangilanishlardan xabardor bo'ling!"
+
+msgid "Subscribe to our newsletter for the latest news and articles"
+msgstr "So'nggi yangiliklar va maqolalar uchun bizning axborot byulletenimizga obuna bo'ling"
+
+msgid "Your Email Address"
+msgstr "Sizning elektron manzilingiz"
+
+msgid "Subscribe"
+msgstr "Obuna bo'lish"
+
+msgid "We'd love to hear from you! Get in touch with our team for any inquiries or feedback"
+msgstr "Sizdan eshitishni xohlaymiz! Har qanday savol yoki fikr-mulohazalar uchun bizning jamoamiz bilan bog'laning"
+
+msgid "Get In Touch"
+msgstr "Bog'lanish"
+
+msgid "Whether you have questions about our products, partnership opportunities, or anything else, our team is ready to answer all your questions."
+msgstr "Mahsulotlarimiz, hamkorlik imkoniyatlari yoki boshqa narsalar haqida savollaringiz bo'lsa, jamoamiz barcha savollaringizga javob berishga tayyor."
+
+msgid "Address:"
+msgstr "Manzil:"
+
+msgid "Phone:"
+msgstr "Telefon:"
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Working Hours:"
+msgstr "Ish vaqti:"
+
+msgid "Connect With Us"
+msgstr "Biz bilan bog'laning"
+
+msgid "Send Us a Message"
+msgstr "Bizga xabar yuboring"
+
+msgid "Your Name"
+msgstr "Ismingiz"
+
+msgid "Your Email"
+msgstr "Elektron manzilingiz"
+
+msgid "Subject"
+msgstr "Mavzu"
+
+msgid "Your Message"
+msgstr "Xabaringiz"
+
+msgid "Send Message"
+msgstr "Xabar yuborish"
+
+msgid "Find Us"
+msgstr "Bizni toping"
+
+msgid "Frequently Asked Questions"
+msgstr "Ko'p so'raladigan savollar"
+
+msgid "Do you offer international shipping?"
+msgstr "Xalqaro yetkazib berishni taklif qilasizmi?"
+
+msgid "Yes, we ship our premium dried fruits internationally. Shipping rates and delivery times may vary depending on your location. Please contact our customer service team for specific information about shipping to your country."
+msgstr "Ha, biz premium quritilgan mevalarimizni xalqaro darajada yetkazib beramiz. Yetkazib berish narxi va vaqti joylashuvingizga qarab farq qilishi mumkin. Mamlakatga yetkazib berish to'g'risida aniq ma'lumot olish uchun mijozlarga xizmat ko'rsatish jamoamiz bilan bog'laning."
+
+msgid "Do your products contain added sugars or preservatives?"
+msgstr "Mahsulotlaringiz qo'shimcha shakar yoki konservantlar o'z ichiga oladimi?"
+
+msgid "No, our dried fruits are 100% natural with no added sugars, preservatives, or artificial ingredients. We use traditional drying methods that preserve the natural sweetness and nutritional value of the fruits."
+msgstr "Yo'q, bizning quritilgan mevalarimiz 100% tabiiy, qo'shimcha shakar, konservantlar yoki sun'iy tarkibiy qismlarsiz. Biz mevalarning tabiiy shirinligi va ozuqaviy qiymatini saqlaydigan an'anaviy quritish usullaridan foydalanamiz."
+
+msgid "What is the shelf life of your dried fruits?"
+msgstr "Quritilgan mevalaringizning saqlash muddati qancha?"
+
+msgid "Our dried fruits typically have a shelf life of 12-18 months when stored properly in a cool, dry place. Once opened, we recommend storing them in an airtight container and consuming within 2-3 months for optimal freshness and flavor."
+msgstr "Bizning quritilgan mevalarimiz odatda salqin, quruq joyda to'g'ri saqlanganda 12-18 oylik saqlash muddatiga ega. Ochilgandan so'ng, ularni havo o'tkazmaydigan idishda saqlashni va eng yaxshi yangilik va ta'm uchun 2-3 oy ichida iste'mol qilishni tavsiya qilamiz."
+
+msgid "Do you offer wholesale options for businesses?"
+msgstr "Bizneslar uchun ulgurji variantlarni taklif qilasizmi?"
+
+msgid "Yes, we offer wholesale options for businesses such as health food stores, cafes, restaurants, and food service providers. Please contact our sales team through the form above or email us at wholesale@dryfruta.com for more information about our wholesale program."
+msgstr "Ha, biz sog'liqni saqlash oziq-ovqat do'konlari, kafelar, restoranlar va oziq-ovqat xizmati ko'rsatuvchi bizneslar uchun ulgurji variantlarni taklif qilamiz. Ulgurji dasturimiz haqida qo'shimcha ma'lumot olish uchun yuqoridagi shakl orqali bizning savdo jamoamiz bilan bog'laning yoki wholesale@dryfruta.com elektron pochta manziliga xat yuboring."
+
+msgid "Subscribe to Our Newsletter"
+msgstr "Bizning axborot byulletenimizga obuna bo'ling"
+
+msgid "Get the latest news, offers, and dried fruit tips delivered to your inbox"
+msgstr "So'nggi yangiliklar, takliflar va quritilgan mevalar haqidagi maslahatlarni elektron pochtangizga oling"
+
+msgid "Meet the team behind Dry Fruta's success and vision"
+msgstr "Dry Fruta'ning muvaffaqiyati va ko'rinishi ortidagi jamoa bilan tanishing"
+
+msgid "Our Vision"
+msgstr "Bizning ko'rinishimiz"
+
+msgid "At Dry Fruta, we're guided by a commitment to quality, sustainability, and health. Our leadership team brings together decades of experience in agriculture, nutrition, and business to deliver premium dried fruits that delight our customers."
+msgstr "Dry Fruta'da biz sifat, barqarorlik va sog'liqni saqlash majburiyati bilan boshqarilamiz. Bizning rahbarlik jamoamiz mijozlarimizni xursand qiladigan premium quritilgan mevalarni yetkazib berish uchun qishloq xo'jaligi, ovqatlanish va biznes sohasidagi o'n yillik tajribani birlashtiradi."
+
+msgid "We believe in:"
+msgstr "Biz ishonchimiz:"
+
+msgid "Sustainable Sourcing"
+msgstr "Barqaror ta'minot"
+
+msgid "Working with farms that practice sustainable agriculture and respect for the environment."
+msgstr "Barqaror qishloq xo'jaligini amaliyot qiladigan va atrof-muhitga hurmat ko'rsatadigan fermalar bilan ishlash."
+
+msgid "Natural Processing"
+msgstr "Tabiiy qayta ishlash"
+
+msgid "Using traditional drying methods that preserve the flavor, nutrition, and natural goodness of fruits."
+msgstr "Mevalarning ta'mi, ozuqaviy qiymati va tabiiy yaxshiligini saqlaydigan an'anaviy quritish usullaridan foydalanish."
+
+msgid "Community Support"
+msgstr "Jamiyat qo'llab-quvvatlashi"
+
+msgid "Building strong relationships with farmers and communities where our fruits are grown."
+msgstr "Bizning mevalarimiz yetishtirilgan fermerlar va jamoalar bilan mustahkam munosabatlarni o'rnatish."
+
+msgid "Meet Our Team"
+msgstr "Bizning jamoamiz bilan tanishing"
+
+msgid "No team members have been added yet. Please check back later!"
+msgstr "Hali hech qanday jamoa a'zolari qo'shilmagan. Iltimos, keyinroq qayta tekshiring!"
+
+msgid "Our Core Values"
+msgstr "Bizning asosiy qadriyatlarimiz"
+
+msgid "The principles that guide our decisions and actions every day"
+msgstr "Har kuni bizning qarorlarimiz va harakatlarimizni boshqaradigan tamoyillar"
+
+msgid "Quality Excellence"
+msgstr "Sifat mukammalligi"
+
+msgid "We are committed to sourcing the finest fruits and maintaining rigorous quality standards throughout our drying and packaging processes."
+msgstr "Biz eng yaxshi mevalarni tanlab olishga va butun quritish va qadoqlash jarayonlarida qattiq sifat standartlarini saqlashga intilamiz."
+
+msgid "Environmental Stewardship"
+msgstr "Ekologik boshqaruv"
+
+msgid "We prioritize sustainable farming practices and eco-friendly packaging to minimize our environmental impact and protect natural resources."
+msgstr "Biz atrof-muhitga ta'sirimizni kamaytirish va tabiiy resurslarni himoya qilish uchun barqaror dehqonchilik amaliyotlari va ekologik jihatdan qulay qadoqlashga ustuvor ahamiyat beramiz."
+
+msgid "Fair Partnership"
+msgstr "Adolatli hamkorlik"
+
+msgid "We build equitable relationships with farmers and suppliers, ensuring fair pricing and ethical labor practices throughout our supply chain."
+msgstr "Biz fermerlar va ta'minotchilar bilan teng munosabatlar o'rnatamiz, butun ta'minot zanjiri bo'ylab adolatli narxlarni va axloqiy mehnat amaliyotlarini ta'minlaymiz."
+
+msgid "Natural Integrity"
+msgstr "Tabiiy yaxlitlik"
+
+msgid "We maintain the natural goodness of our fruits without adding preservatives, sugars, or artificial ingredients to provide truly healthy options."
+msgstr "Biz haqiqatan ham sog'lom variantlarni taqdim etish uchun konservantlar, shakarlar yoki sun'iy tarkibiy qismlarni qo'shmasdan mevalarimizning tabiiy yaxshiligini saqlaymiz."
+
+msgid "Customer Wellness"
+msgstr "Mijoz salomatligi"
+
+msgid "We are dedicated to contributing to our customers' health and wellbeing by providing nutritious, high-quality dried fruits for a balanced lifestyle."
+msgstr "Biz muvozanatli turmush tarzi uchun to'yimli, yuqori sifatli quritilgan mevalarni taqdim etish orqali mijozlarimizning salomatligi va farovonligiga hissa qo'shishga bag'ishlanganmiz."
+
+msgid "Continuous Innovation"
+msgstr "Doimiy innovatsiyalar"
+
+msgid "We constantly explore new techniques and technologies to improve our products, processes, and environmental footprint while respecting traditional methods."
+msgstr "Biz an'anaviy usullarga hurmat bilan yangi texnika va texnologiyalarni doimiy ravishda o'rganamiz, mahsulotlarimiz, jarayonlarimiz va ekologik izimizni yaxshilash uchun."
+
+msgid "Join Our Team"
+msgstr "Bizning jamoamizga qo'shiling"
+
+msgid "Interested in working with us? Check out our career opportunities"
+msgstr "Biz bilan ishlashga qiziqqanmisiz? Bizning karyera imkoniyatlarimiz bilan tanishing"
+
+msgid "Meet the premium farms and organizations we work with to deliver the finest dried fruits"
+msgstr "Biz eng yaxshi quritilgan mevalarni yetkazib berish uchun hamkorlik qiladigan premium fermalar va tashkilotlar bilan tanishing"
+
+msgid "Become a Partner"
+msgstr "Hamkor bo'ling"
+
+msgid "Ready to explore how we can work together? Reach out to our partnership team today."
+msgstr "Qanday hamkorlik qilishimizni o'rganishga tayyormisiz? Bugun bizning hamkorlik jamoamiz bilan bog'laning."
+
+msgid "Access to a growing market of health-conscious consumers"
+msgstr "Sog'liqni saqlashga e'tibor qaratadigan iste'molchilarning o'sib borayotgan bozoriga kirish imkoniyati"
+
+msgid "Stable, long-term business relationship"
+msgstr "Barqaror, uzoq muddatli biznes munosabatlari"
+
+msgid "Fair trade practices and transparent pricing"
+msgstr "Adolatli savdo amaliyotlari va shaffof narxlar"
+
+msgid "Support for sustainable farming practices"
+msgstr "Barqaror qishloq xo'jaligi amaliyotlari uchun qo'llab-quvvatlash"
+
+msgid "Joint marketing opportunities"
+msgstr "Qo'shma marketing imkoniyatlari"
+
+msgid "Contact Us About Partnership"
+msgstr "Hamkorlik haqida biz bilan bog'laning"
+
+msgid "What Our Partners Say"
+msgstr "Hamkorlarimiz nima deydilar"
+
+msgid "Hear from the farms and organizations that work with us"
+msgstr "Biz bilan ishlaydigan fermalar va tashkilotlarning fikrlarini eshiting"
+
+msgid "Interested in Partnering with Us?"
+msgstr "Biz bilan hamkorlik qilishga qiziqasizmi?"
+
+msgid "Contact us today to discuss partnership opportunities"
+msgstr "Hamkorlik imkoniyatlarini muhokama qilish uchun bugun biz bilan bog'laning"
+
+msgid "Get in Touch"
+msgstr "Bog'lanish"
+
+msgid "Dry Fruta - Premium Dried Fruits & Natural Snacks"
+msgstr "Dry Fruta - Premium Quritilgan Mevalar va Tabiiy Gazaklar"
+
+msgid "Premium quality natural dried fruits with no additives. Shop our selection of organic apricots, dates, berries and more. Worldwide shipping available."
+msgstr "Qo'shimchalarsiz tabiiy premium quritilgan mevalar. Bizning organik o'rik, xurmo, rezavor mevalar va boshqalar tanlovimizdan xarid qiling. Butun dunyo bo'ylab yetkazib berish mavjud."
+
+msgid "Products"
+msgstr "Mahsulotlar"
+
+msgid "123 Fruit Street, Healthy City"
+msgstr "Meva ko'chasi 123, Sog'lom Shahar"
+
+msgid "+1 (123) 456-7890"
+msgstr "+1 (123) 456-7890"
+
+msgid "Mon-Fri: 9:00 AM - 6:00 PM"
+msgstr "Du-Ju: 9:00 - 18:00"
+
+msgid "Designed with"
+msgstr "Ishlab chiqilgan"
+
+msgid "for healthy living"
+msgstr "sog'lom hayot uchun"
+
+msgid "Additives"
+msgstr "Qo'shimchalar"
+
+msgid "Natural"
+msgstr "Tabiiy" 

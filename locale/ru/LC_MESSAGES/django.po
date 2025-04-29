@@ -97,4 +97,272 @@ msgid "Providing premium quality dried fruits sourced from the best farms around
 msgstr "Предлагаем премиальные сухофрукты, полученные с лучших ферм по всему миру. Полезные закуски для сбалансированного образа жизни."
 
 msgid "Copyright"
-msgstr "Авторское право" 
+msgstr "Авторское право"
+
+# Additional translations
+msgid "Stay updated with our latest articles, recipes, and industry news"
+msgstr "Будьте в курсе наших последних статей, рецептов и новостей отрасли"
+
+msgid "Recent Articles"
+msgstr "Недавние статьи"
+
+msgid "Read More"
+msgstr "Читать далее"
+
+msgid "No articles have been published yet. Please check back later!"
+msgstr "Статьи еще не опубликованы. Пожалуйста, проверьте позже!"
+
+msgid "Latest News"
+msgstr "Последние новости"
+
+msgid "No news items have been published yet. Please check back later!"
+msgstr "Новости еще не опубликованы. Пожалуйста, проверьте позже!"
+
+msgid "Stay Updated!"
+msgstr "Будьте в курсе!"
+
+msgid "Subscribe to our newsletter for the latest news and articles"
+msgstr "Подпишитесь на нашу рассылку для получения последних новостей и статей"
+
+msgid "Your Email Address"
+msgstr "Ваш email адрес"
+
+msgid "Subscribe"
+msgstr "Подписаться"
+
+msgid "We'd love to hear from you! Get in touch with our team for any inquiries or feedback"
+msgstr "Мы будем рады услышать от вас! Свяжитесь с нашей командой для любых запросов или отзывов"
+
+msgid "Get In Touch"
+msgstr "Связаться с нами"
+
+msgid "Whether you have questions about our products, partnership opportunities, or anything else, our team is ready to answer all your questions."
+msgstr "Если у вас есть вопросы о наших продуктах, возможностях сотрудничества или что-то еще, наша команда готова ответить на все ваши вопросы."
+
+msgid "Address:"
+msgstr "Адрес:"
+
+msgid "Phone:"
+msgstr "Телефон:"
+
+msgid "Email:"
+msgstr "Email:"
+
+msgid "Working Hours:"
+msgstr "Часы работы:"
+
+msgid "Connect With Us"
+msgstr "Связаться с нами"
+
+msgid "Send Us a Message"
+msgstr "Отправить нам сообщение"
+
+msgid "Your Name"
+msgstr "Ваше имя"
+
+msgid "Your Email"
+msgstr "Ваш email"
+
+msgid "Subject"
+msgstr "Тема"
+
+msgid "Your Message"
+msgstr "Ваше сообщение"
+
+msgid "Send Message"
+msgstr "Отправить сообщение"
+
+msgid "Find Us"
+msgstr "Найти нас"
+
+msgid "Frequently Asked Questions"
+msgstr "Часто задаваемые вопросы"
+
+msgid "Do you offer international shipping?"
+msgstr "Вы осуществляете международную доставку?"
+
+msgid "Yes, we ship our premium dried fruits internationally. Shipping rates and delivery times may vary depending on your location. Please contact our customer service team for specific information about shipping to your country."
+msgstr "Да, мы осуществляем международную доставку наших премиальных сухофруктов. Стоимость доставки и сроки могут отличаться в зависимости от вашего местонахождения. Пожалуйста, свяжитесь с нашей службой поддержки клиентов для получения конкретной информации о доставке в вашу страну."
+
+msgid "Do your products contain added sugars or preservatives?"
+msgstr "Содержат ли ваши продукты добавленные сахара или консерванты?"
+
+msgid "No, our dried fruits are 100% natural with no added sugars, preservatives, or artificial ingredients. We use traditional drying methods that preserve the natural sweetness and nutritional value of the fruits."
+msgstr "Нет, наши сухофрукты 100% натуральные, без добавления сахара, консервантов или искусственных ингредиентов. Мы используем традиционные методы сушки, которые сохраняют естественную сладость и питательную ценность фруктов."
+
+msgid "What is the shelf life of your dried fruits?"
+msgstr "Какой срок хранения ваших сухофруктов?"
+
+msgid "Our dried fruits typically have a shelf life of 12-18 months when stored properly in a cool, dry place. Once opened, we recommend storing them in an airtight container and consuming within 2-3 months for optimal freshness and flavor."
+msgstr "Срок хранения наших сухофруктов обычно составляет 12-18 месяцев при правильном хранении в прохладном, сухом месте. После открытия упаковки мы рекомендуем хранить их в герметичном контейнере и употребить в течение 2-3 месяцев для оптимальной свежести и вкуса."
+
+msgid "Do you offer wholesale options for businesses?"
+msgstr "Предлагаете ли вы оптовые варианты для бизнеса?"
+
+msgid "Yes, we offer wholesale options for businesses such as health food stores, cafes, restaurants, and food service providers. Please contact our sales team through the form above or email us at wholesale@dryfruta.com for more information about our wholesale program."
+msgstr "Да, мы предлагаем оптовые варианты для бизнеса, такого как магазины здорового питания, кафе, рестораны и поставщики продуктов питания. Пожалуйста, свяжитесь с нашей командой продаж через форму выше или отправьте нам email на wholesale@dryfruta.com для получения дополнительной информации о нашей оптовой программе."
+
+msgid "Subscribe to Our Newsletter"
+msgstr "Подписаться на нашу рассылку"
+
+msgid "Get the latest news, offers, and dried fruit tips delivered to your inbox"
+msgstr "Получайте последние новости, предложения и советы о сухофруктах на вашу почту"
+
+msgid "Meet the team behind Dry Fruta's success and vision"
+msgstr "Познакомьтесь с командой, стоящей за успехом и видением Dry Fruta"
+
+msgid "Our Vision"
+msgstr "Наше видение"
+
+msgid "At Dry Fruta, we're guided by a commitment to quality, sustainability, and health. Our leadership team brings together decades of experience in agriculture, nutrition, and business to deliver premium dried fruits that delight our customers."
+msgstr "В Dry Fruta мы руководствуемся приверженностью к качеству, устойчивости и здоровью. Наша руководящая команда объединяет десятилетия опыта в сельском хозяйстве, питании и бизнесе, чтобы поставлять премиальные сухофрукты, которые радуют наших клиентов."
+
+msgid "We believe in:"
+msgstr "Мы верим в:"
+
+msgid "Sustainable Sourcing"
+msgstr "Устойчивое снабжение"
+
+msgid "Working with farms that practice sustainable agriculture and respect for the environment."
+msgstr "Работа с фермами, которые практикуют устойчивое сельское хозяйство и уважение к окружающей среде."
+
+msgid "Natural Processing"
+msgstr "Натуральная обработка"
+
+msgid "Using traditional drying methods that preserve the flavor, nutrition, and natural goodness of fruits."
+msgstr "Использование традиционных методов сушки, которые сохраняют вкус, питательность и натуральные свойства фруктов."
+
+msgid "Community Support"
+msgstr "Поддержка сообщества"
+
+msgid "Building strong relationships with farmers and communities where our fruits are grown."
+msgstr "Построение крепких отношений с фермерами и сообществами, где выращиваются наши фрукты."
+
+msgid "Meet Our Team"
+msgstr "Познакомьтесь с нашей командой"
+
+msgid "No team members have been added yet. Please check back later!"
+msgstr "Члены команды еще не добавлены. Пожалуйста, проверьте позже!"
+
+msgid "Our Core Values"
+msgstr "Наши основные ценности"
+
+msgid "The principles that guide our decisions and actions every day"
+msgstr "Принципы, которые ежедневно руководят нашими решениями и действиями"
+
+msgid "Quality Excellence"
+msgstr "Превосходное качество"
+
+msgid "We are committed to sourcing the finest fruits and maintaining rigorous quality standards throughout our drying and packaging processes."
+msgstr "Мы стремимся приобретать лучшие фрукты и поддерживать строгие стандарты качества на протяжении всего процесса сушки и упаковки."
+
+msgid "Environmental Stewardship"
+msgstr "Экологическая ответственность"
+
+msgid "We prioritize sustainable farming practices and eco-friendly packaging to minimize our environmental impact and protect natural resources."
+msgstr "Мы отдаем приоритет устойчивым методам ведения сельского хозяйства и экологически чистой упаковке, чтобы минимизировать наше воздействие на окружающую среду и защитить природные ресурсы."
+
+msgid "Fair Partnership"
+msgstr "Честное партнерство"
+
+msgid "We build equitable relationships with farmers and suppliers, ensuring fair pricing and ethical labor practices throughout our supply chain."
+msgstr "Мы строим справедливые отношения с фермерами и поставщиками, обеспечивая справедливое ценообразование и этичные трудовые практики во всей нашей цепочке поставок."
+
+msgid "Natural Integrity"
+msgstr "Натуральная целостность"
+
+msgid "We maintain the natural goodness of our fruits without adding preservatives, sugars, or artificial ingredients to provide truly healthy options."
+msgstr "Мы сохраняем натуральную пользу наших фруктов без добавления консервантов, сахара или искусственных ингредиентов, чтобы предложить по-настоящему полезные варианты."
+
+msgid "Customer Wellness"
+msgstr "Благополучие клиентов"
+
+msgid "We are dedicated to contributing to our customers' health and wellbeing by providing nutritious, high-quality dried fruits for a balanced lifestyle."
+msgstr "Мы стремимся способствовать здоровью и благополучию наших клиентов, предоставляя питательные, высококачественные сухофрукты для сбалансированного образа жизни."
+
+msgid "Continuous Innovation"
+msgstr "Непрерывные инновации"
+
+msgid "We constantly explore new techniques and technologies to improve our products, processes, and environmental footprint while respecting traditional methods."
+msgstr "Мы постоянно исследуем новые методы и технологии для улучшения наших продуктов, процессов и экологического следа, при этом уважая традиционные методы."
+
+msgid "Join Our Team"
+msgstr "Присоединяйтесь к нашей команде"
+
+msgid "Interested in working with us? Check out our career opportunities"
+msgstr "Заинтересованы в работе с нами? Ознакомьтесь с нашими карьерными возможностями"
+
+msgid "Meet the premium farms and organizations we work with to deliver the finest dried fruits"
+msgstr "Познакомьтесь с премиальными фермами и организациями, с которыми мы работаем, чтобы доставлять лучшие сухофрукты"
+
+msgid "Become a Partner"
+msgstr "Стать партнером"
+
+msgid "Ready to explore how we can work together? Reach out to our partnership team today."
+msgstr "Готовы узнать, как мы можем работать вместе? Свяжитесь с нашей командой партнерства сегодня."
+
+msgid "Access to a growing market of health-conscious consumers"
+msgstr "Доступ к растущему рынку потребителей, заботящихся о здоровье"
+
+msgid "Stable, long-term business relationship"
+msgstr "Стабильные, долгосрочные деловые отношения"
+
+msgid "Fair trade practices and transparent pricing"
+msgstr "Практики справедливой торговли и прозрачное ценообразование"
+
+msgid "Support for sustainable farming practices"
+msgstr "Поддержка устойчивых методов ведения сельского хозяйства"
+
+msgid "Joint marketing opportunities"
+msgstr "Совместные маркетинговые возможности"
+
+msgid "Contact Us About Partnership"
+msgstr "Свяжитесь с нами по поводу партнерства"
+
+msgid "What Our Partners Say"
+msgstr "Что говорят наши партнеры"
+
+msgid "Hear from the farms and organizations that work with us"
+msgstr "Мнения ферм и организаций, которые работают с нами"
+
+msgid "Interested in Partnering with Us?"
+msgstr "Заинтересованы в партнерстве с нами?"
+
+msgid "Contact us today to discuss partnership opportunities"
+msgstr "Свяжитесь с нами сегодня, чтобы обсудить возможности партнерства"
+
+msgid "Get in Touch"
+msgstr "Связаться с нами"
+
+msgid "Dry Fruta - Premium Dried Fruits & Natural Snacks"
+msgstr "Dry Fruta - Премиальные Сухофрукты и Натуральные Закуски"
+
+msgid "Premium quality natural dried fruits with no additives. Shop our selection of organic apricots, dates, berries and more. Worldwide shipping available."
+msgstr "Натуральные сухофрукты премиального качества без добавок. В нашем ассортименте органические абрикосы, финики, ягоды и многое другое. Доступна доставка по всему миру."
+
+msgid "Products"
+msgstr "Продукты"
+
+msgid "123 Fruit Street, Healthy City"
+msgstr "Улица Фруктовая 123, Здоровый Город"
+
+msgid "+1 (123) 456-7890"
+msgstr "+1 (123) 456-7890"
+
+msgid "Mon-Fri: 9:00 AM - 6:00 PM"
+msgstr "Пн-Пт: 9:00 - 18:00"
+
+msgid "Designed with"
+msgstr "Разработано с"
+
+msgid "for healthy living"
+msgstr "для здорового образа жизни"
+
+msgid "Additives"
+msgstr "Добавки"
+
+msgid "Natural"
+msgstr "Натуральный"
+
+msgid "Tasty"
+msgstr "Вкусный" 
