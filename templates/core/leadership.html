@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 <!-- Page Header -->
@@ -6,8 +7,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4">Our Leadership</h1>
-                <p class="lead text-muted">Meet the team behind Dry Fruta's success and vision</p>
+                <h1 class="display-4 fw-bold mb-4">{% trans "Our Leadership" %}</h1>
+                <p class="lead text-muted">{% trans "Meet the team behind Dry Fruta's success and vision" %}</p>
             </div>
         </div>
     </div>
@@ -18,24 +19,24 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                <h2 class="display-5 fw-bold mb-4">Our Vision</h2>
-                <p class="lead mb-4">At Dry Fruta, we're guided by a commitment to quality, sustainability, and health. Our leadership team brings together decades of experience in agriculture, nutrition, and business to deliver premium dried fruits that delight our customers.</p>
-                <p class="mb-4">We believe in:</p>
+                <h2 class="display-5 fw-bold mb-4">{% trans "Our Vision" %}</h2>
+                <p class="lead mb-4">{% trans "At Dry Fruta, we're guided by a commitment to quality, sustainability, and health. Our leadership team brings together decades of experience in agriculture, nutrition, and business to deliver premium dried fruits that delight our customers." %}</p>
+                <p class="mb-4">{% trans "We believe in:" %}</p>
                 <div class="mb-3">
-                    <h5><i class="fas fa-leaf text-primary-custom me-2"></i> Sustainable Sourcing</h5>
-                    <p>Working with farms that practice sustainable agriculture and respect for the environment.</p>
+                    <h5><i class="fas fa-leaf text-primary-custom me-2"></i> {% trans "Sustainable Sourcing" %}</h5>
+                    <p>{% trans "Working with farms that practice sustainable agriculture and respect for the environment." %}</p>
                 </div>
                 <div class="mb-3">
-                    <h5><i class="fas fa-heart text-primary-custom me-2"></i> Natural Processing</h5>
-                    <p>Using traditional drying methods that preserve the flavor, nutrition, and natural goodness of fruits.</p>
+                    <h5><i class="fas fa-heart text-primary-custom me-2"></i> {% trans "Natural Processing" %}</h5>
+                    <p>{% trans "Using traditional drying methods that preserve the flavor, nutrition, and natural goodness of fruits." %}</p>
                 </div>
                 <div>
-                    <h5><i class="fas fa-users text-primary-custom me-2"></i> Community Support</h5>
-                    <p>Building strong relationships with farmers and communities where our fruits are grown.</p>
+                    <h5><i class="fas fa-users text-primary-custom me-2"></i> {% trans "Community Support" %}</h5>
+                    <p>{% trans "Building strong relationships with farmers and communities where our fruits are grown." %}</p>
                 </div>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Our Vision" class="img-fluid rounded shadow">
+                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="{% trans "Our Vision" %}" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
@@ -44,7 +45,7 @@
 <!-- Team Members Section -->
 <section class="section-padding bg-light">
     <div class="container">
-        <h2 class="display-5 fw-bold mb-5 text-center">Meet Our Team</h2>
+        <h2 class="display-5 fw-bold mb-5 text-center">{% trans "Meet Our Team" %}</h2>
         
         <div class="row g-4">
             {% if team_members %}
@@ -71,12 +72,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="CEO" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "CEO" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">John Martinez</h4>
-                            <p class="text-primary-custom mb-3">CEO & Founder</p>
-                            <p class="card-text">With over 20 years of experience in the organic food industry, John founded Dry Fruta with a vision to bring premium quality dried fruits to health-conscious consumers worldwide. His commitment to sustainable agriculture has been the driving force behind our partnerships with eco-friendly farms.</p>
+                            <h4 class="card-title">{% trans "John Martinez" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "CEO & Founder" %}</p>
+                            <p class="card-text">{% trans "With over 20 years of experience in the organic food industry, John founded Dry Fruta with a vision to bring premium quality dried fruits to health-conscious consumers worldwide. His commitment to sustainable agriculture has been the driving force behind our partnerships with eco-friendly farms." %}</p>
                         </div>
                     </div>
                 </div>
@@ -84,12 +85,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="COO" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "COO" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">Emily Chen</h4>
-                            <p class="text-primary-custom mb-3">COO</p>
-                            <p class="card-text">Emily oversees all operational aspects of Dry Fruta, ensuring efficiency from farm to table. With a background in supply chain management and agricultural economics, she has developed our innovative sourcing strategy that prioritizes quality and sustainability.</p>
+                            <h4 class="card-title">{% trans "Emily Chen" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "COO" %}</p>
+                            <p class="card-text">{% trans "Emily oversees all operational aspects of Dry Fruta, ensuring efficiency from farm to table. With a background in supply chain management and agricultural economics, she has developed our innovative sourcing strategy that prioritizes quality and sustainability." %}</p>
                         </div>
                     </div>
                 </div>
@@ -97,12 +98,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Head of Product" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "Head of Product" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">Daniel Kim</h4>
-                            <p class="text-primary-custom mb-3">Head of Product</p>
-                            <p class="card-text">As a food scientist with a specialization in natural preservation methods, Daniel leads our product development team. His expertise in traditional drying techniques has been instrumental in creating our signature product line that maintains optimal flavor and nutritional value.</p>
+                            <h4 class="card-title">{% trans "Daniel Kim" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "Head of Product" %}</p>
+                            <p class="card-text">{% trans "As a food scientist with a specialization in natural preservation methods, Daniel leads our product development team. His expertise in traditional drying techniques has been instrumental in creating our signature product line that maintains optimal flavor and nutritional value." %}</p>
                         </div>
                     </div>
                 </div>
@@ -110,12 +111,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Marketing Director" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "Marketing Director" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">Sophia Rodriguez</h4>
-                            <p class="text-primary-custom mb-3">Marketing Director</p>
-                            <p class="card-text">With a passion for sustainable food systems and digital marketing expertise, Sophia leads our marketing initiatives. She has successfully built our brand identity around quality, transparency, and environmental responsibility, connecting with health-conscious consumers globally.</p>
+                            <h4 class="card-title">{% trans "Sophia Rodriguez" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "Marketing Director" %}</p>
+                            <p class="card-text">{% trans "With a passion for sustainable food systems and digital marketing expertise, Sophia leads our marketing initiatives. She has successfully built our brand identity around quality, transparency, and environmental responsibility, connecting with health-conscious consumers globally." %}</p>
                         </div>
                     </div>
                 </div>
@@ -123,12 +124,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="400">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="CFO" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "CFO" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">Michael Thompson</h4>
-                            <p class="text-primary-custom mb-3">CFO</p>
-                            <p class="card-text">Michael brings financial expertise and a commitment to ethical business practices to Dry Fruta. He ensures our financial strategies align with our mission of fair trade and sustainability, while driving profitable growth that benefits all stakeholders, from farmers to consumers.</p>
+                            <h4 class="card-title">{% trans "Michael Thompson" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "CFO" %}</p>
+                            <p class="card-text">{% trans "Michael brings financial expertise and a commitment to ethical business practices to Dry Fruta. He ensures our financial strategies align with our mission of fair trade and sustainability, while driving profitable growth that benefits all stakeholders, from farmers to consumers." %}</p>
                         </div>
                     </div>
                 </div>
@@ -136,12 +137,12 @@
                 <div class="col-md-6 col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="500">
                     <div class="card h-100 border-0 shadow-sm">
                         <div class="bg-light d-flex align-items-center justify-content-center" style="height: 300px;">
-                            <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Sustainability Officer" style="height: 300px; object-fit: cover; width: 100%;">
+                            <img src="https://images.unsplash.com/photo-1628890923662-2cb23c2e0cfe?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="{% trans "Sustainability Officer" %}" style="height: 300px; object-fit: cover; width: 100%;">
                         </div>
                         <div class="card-body p-4">
-                            <h4 class="card-title">Amara Patel</h4>
-                            <p class="text-primary-custom mb-3">Sustainability Officer</p>
-                            <p class="card-text">As an environmental scientist specializing in sustainable agriculture, Amara leads our sustainability initiatives. She works closely with our partner farms to implement eco-friendly practices and ensures our entire supply chain meets the highest environmental and ethical standards.</p>
+                            <h4 class="card-title">{% trans "Amara Patel" %}</h4>
+                            <p class="text-primary-custom mb-3">{% trans "Sustainability Officer" %}</p>
+                            <p class="card-text">{% trans "As an environmental scientist specializing in sustainable agriculture, Amara leads our sustainability initiatives. She works closely with our partner farms to implement eco-friendly practices and ensures our entire supply chain meets the highest environmental and ethical standards." %}</p>
                         </div>
                     </div>
                 </div>
@@ -155,8 +156,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center mb-5">
-                <h2 class="display-5 fw-bold mb-4">Our Core Values</h2>
-                <p class="lead">The principles that guide our decisions and actions every day</p>
+                <h2 class="display-5 fw-bold mb-4">{% trans "Our Core Values" %}</h2>
+                <p class="lead">{% trans "The principles that guide our decisions and actions every day" %}</p>
             </div>
         </div>
         
@@ -168,8 +169,8 @@
                             <i class="fas fa-leaf text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Quality Excellence</h4>
-                    <p>We are committed to sourcing the finest fruits and maintaining rigorous quality standards throughout our drying and packaging processes.</p>
+                    <h4 class="mb-3">{% trans "Quality Excellence" %}</h4>
+                    <p>{% trans "We are committed to sourcing the finest fruits and maintaining rigorous quality standards throughout our drying and packaging processes." %}</p>
                 </div>
             </div>
             
@@ -180,8 +181,8 @@
                             <i class="fas fa-globe-americas text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Environmental Stewardship</h4>
-                    <p>We prioritize sustainable farming practices and eco-friendly packaging to minimize our environmental impact and protect natural resources.</p>
+                    <h4 class="mb-3">{% trans "Environmental Stewardship" %}</h4>
+                    <p>{% trans "We prioritize sustainable farming practices and eco-friendly packaging to minimize our environmental impact and protect natural resources." %}</p>
                 </div>
             </div>
             
@@ -192,8 +193,8 @@
                             <i class="fas fa-handshake text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Fair Partnership</h4>
-                    <p>We build equitable relationships with farmers and suppliers, ensuring fair pricing and ethical labor practices throughout our supply chain.</p>
+                    <h4 class="mb-3">{% trans "Fair Partnership" %}</h4>
+                    <p>{% trans "We build equitable relationships with farmers and suppliers, ensuring fair pricing and ethical labor practices throughout our supply chain." %}</p>
                 </div>
             </div>
             
@@ -204,8 +205,8 @@
                             <i class="fas fa-apple-alt text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Natural Integrity</h4>
-                    <p>We maintain the natural goodness of our fruits without adding preservatives, sugars, or artificial ingredients to provide truly healthy options.</p>
+                    <h4 class="mb-3">{% trans "Natural Integrity" %}</h4>
+                    <p>{% trans "We maintain the natural goodness of our fruits without adding preservatives, sugars, or artificial ingredients to provide truly healthy options." %}</p>
                 </div>
             </div>
             
@@ -216,8 +217,8 @@
                             <i class="fas fa-heart text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Customer Wellness</h4>
-                    <p>We are dedicated to contributing to our customers' health and wellbeing by providing nutritious, high-quality dried fruits for a balanced lifestyle.</p>
+                    <h4 class="mb-3">{% trans "Customer Wellness" %}</h4>
+                    <p>{% trans "We are dedicated to contributing to our customers' health and wellbeing by providing nutritious, high-quality dried fruits for a balanced lifestyle." %}</p>
                 </div>
             </div>
             
@@ -228,8 +229,8 @@
                             <i class="fas fa-lightbulb text-white fa-2x"></i>
                         </span>
                     </div>
-                    <h4 class="mb-3">Continuous Innovation</h4>
-                    <p>We constantly explore new techniques and technologies to improve our products, processes, and environmental footprint while respecting traditional methods.</p>
+                    <h4 class="mb-3">{% trans "Continuous Innovation" %}</h4>
+                    <p>{% trans "We constantly explore new techniques and technologies to improve our products, processes, and environmental footprint while respecting traditional methods." %}</p>
                 </div>
             </div>
         </div>
@@ -241,11 +242,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold">Join Our Team</h2>
-                <p class="lead mb-0">Interested in working with us? Check out our career opportunities</p>
+                <h2 class="display-5 fw-bold">{% trans "Join Our Team" %}</h2>
+                <p class="lead mb-0">{% trans "Interested in working with us? Check out our career opportunities" %}</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">Contact Us <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">{% trans "Contact Us" %} <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </div>

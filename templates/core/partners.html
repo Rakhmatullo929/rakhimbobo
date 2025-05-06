@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load i18n %}
 
 {% block content %}
 <!-- Page Header -->
@@ -6,8 +7,8 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8 mx-auto text-center">
-                <h1 class="display-4 fw-bold mb-4">Our Partners</h1>
-                <p class="lead text-muted">Meet the premium farms and organizations we work with to deliver the finest dried fruits</p>
+                <h1 class="display-4 fw-bold mb-4">{% trans "Our Partners" %}</h1>
+                <p class="lead text-muted">{% trans "Meet the premium farms and organizations we work with to deliver the finest dried fruits" %}</p>
             </div>
         </div>
     </div>
@@ -34,7 +35,7 @@
                                 </div>
                                 <p class="card-text">{{ partner.description|default:"A valued partner of Dry Fruta, contributing to our mission of delivering premium quality dried fruits." }}</p>
                                 {% if partner.website %}
-                                    <a href="{{ partner.website }}" target="_blank" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                                    <a href="{{ partner.website }}" target="_blank" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                                 {% endif %}
                             </div>
                         </div>
@@ -49,10 +50,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">O</span>
                                 </div>
-                                <h4 class="card-title">Organic Harvest Farms</h4>
+                                <h4 class="card-title">{% trans "Organic Harvest Farms" %}</h4>
                             </div>
-                            <p class="card-text">A certified organic farm that supplies us with premium quality apricots, peaches, and apples. Their sustainable farming practices ensure the finest fruits for our drying process.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "A certified organic farm that supplies us with premium quality apricots, peaches, and apples. Their sustainable farming practices ensure the finest fruits for our drying process." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -64,10 +65,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">G</span>
                                 </div>
-                                <h4 class="card-title">Golden Valley Berries</h4>
+                                <h4 class="card-title">{% trans "Golden Valley Berries" %}</h4>
                             </div>
-                            <p class="card-text">Specialists in growing the finest berries, Golden Valley provides us with cranberries, blueberries, and strawberries. Their expert knowledge ensures optimal flavor and nutritional value.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "Specialists in growing the finest berries, Golden Valley provides us with cranberries, blueberries, and strawberries. Their expert knowledge ensures optimal flavor and nutritional value." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -79,10 +80,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">T</span>
                                 </div>
-                                <h4 class="card-title">Tropical Delight Plantations</h4>
+                                <h4 class="card-title">{% trans "Tropical Delight Plantations" %}</h4>
                             </div>
-                            <p class="card-text">Our source for exotic tropical fruits like mangoes, pineapples, and bananas. Their family-owned plantations in tropical regions ensure the authentic taste of sun-ripened fruits.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "Our source for exotic tropical fruits like mangoes, pineapples, and bananas. Their family-owned plantations in tropical regions ensure the authentic taste of sun-ripened fruits." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -94,10 +95,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">M</span>
                                 </div>
-                                <h4 class="card-title">Mediterranean Date Gardens</h4>
+                                <h4 class="card-title">{% trans "Mediterranean Date Gardens" %}</h4>
                             </div>
-                            <p class="card-text">Specialists in date cultivation, Mediterranean Date Gardens provides us with the finest Medjool and Deglet Noor dates from their ancient groves in traditional date-growing regions.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "Specialists in date cultivation, Mediterranean Date Gardens provides us with the finest Medjool and Deglet Noor dates from their ancient groves in traditional date-growing regions." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -109,10 +110,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">E</span>
                                 </div>
-                                <h4 class="card-title">EcoPackage Solutions</h4>
+                                <h4 class="card-title">{% trans "EcoPackage Solutions" %}</h4>
                             </div>
-                            <p class="card-text">Our packaging partner committed to sustainability. They provide eco-friendly, recyclable packaging solutions that help us reduce our environmental footprint while keeping our fruits fresh.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "Our packaging partner committed to sustainability. They provide eco-friendly, recyclable packaging solutions that help us reduce our environmental footprint while keeping our fruits fresh." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -124,10 +125,10 @@
                                 <div class="bg-light rounded-circle mx-auto d-flex align-items-center justify-content-center" style="width: 120px; height: 120px;">
                                     <span class="text-primary-custom display-4 fw-bold">N</span>
                                 </div>
-                                <h4 class="card-title">Natural Nutrition Institute</h4>
+                                <h4 class="card-title">{% trans "Natural Nutrition Institute" %}</h4>
                             </div>
-                            <p class="card-text">A research partner that helps us analyze and maximize the nutritional value of our dried fruits. Their expertise ensures our products maintain optimal vitamin and mineral content.</p>
-                            <a href="#" class="btn btn-outline-primary-custom mt-3">Visit Website <i class="fas fa-external-link-alt ms-1"></i></a>
+                            <p class="card-text">{% trans "A research partner that helps us analyze and maximize the nutritional value of our dried fruits. Their expertise ensures our products maintain optimal vitamin and mineral content." %}</p>
+                            <a href="#" class="btn btn-outline-primary-custom mt-3">{% trans "Visit Website" %} <i class="fas fa-external-link-alt ms-1"></i></a>
                         </div>
                     </div>
                 </div>
@@ -141,19 +142,19 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
-                <h2 class="display-5 fw-bold mb-4">Become a Partner</h2>
-                <p class="lead mb-4">Ready to explore how we can work together? Reach out to our partnership team today.</p>
+                <h2 class="display-5 fw-bold mb-4">{% trans "Become a Partner" %}</h2>
+                <p class="lead mb-4">{% trans "Ready to explore how we can work together? Reach out to our partnership team today." %}</p>
                 <ul class="list-unstyled mb-4">
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Access to a growing market of health-conscious consumers</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Stable, long-term business relationship</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Fair trade practices and transparent pricing</li>
-                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> Support for sustainable farming practices</li>
-                    <li><i class="fas fa-check-circle text-primary-custom me-2"></i> Joint marketing opportunities</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> {% trans "Access to a growing market of health-conscious consumers" %}</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> {% trans "Stable, long-term business relationship" %}</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> {% trans "Fair trade practices and transparent pricing" %}</li>
+                    <li class="mb-3"><i class="fas fa-check-circle text-primary-custom me-2"></i> {% trans "Support for sustainable farming practices" %}</li>
+                    <li><i class="fas fa-check-circle text-primary-custom me-2"></i> {% trans "Joint marketing opportunities" %}</li>
                 </ul>
-                <a href="{% url 'core:contacts' %}" class="btn btn-primary-custom btn-lg">Contact Us About Partnership</a>
+                <a href="{% url 'core:contacts' %}" class="btn btn-primary-custom btn-lg">{% trans "Contact Us About Partnership" %}</a>
             </div>
             <div class="col-lg-6" data-aos="fade-left">
-                <img src="https://images.unsplash.com/photo-1529693662653-9d480530a697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="Partnership" class="img-fluid rounded shadow">
+                <img src="https://images.unsplash.com/photo-1529693662653-9d480530a697?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" alt="{% trans "Partnership" %}" class="img-fluid rounded shadow">
             </div>
         </div>
     </div>
@@ -163,8 +164,8 @@
 <section class="section-padding">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="display-5 fw-bold">What Our Partners Say</h2>
-            <p class="lead text-muted">Hear from the farms and organizations that work with us</p>
+            <h2 class="display-5 fw-bold">{% trans "What Our Partners Say" %}</h2>
+            <p class="lead text-muted">{% trans "Hear from the farms and organizations that work with us" %}</p>
         </div>
         
         <div class="row justify-content-center">
@@ -176,10 +177,10 @@
                                 <div class="mb-4">
                                     <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
                                 </div>
-                                <p class="lead mb-4">"Working with Dry Fruta has been a game-changer for our farm. Their commitment to quality and fair pricing has allowed us to invest in sustainable practices while growing our business."</p>
+                                <p class="lead mb-4">{% trans "\"Working with Dry Fruta has been a game-changer for our farm. Their commitment to quality and fair pricing has allowed us to invest in sustainable practices while growing our business.\"" %}</p>
                                 <div>
-                                    <h5 class="mb-1">David Rodriguez</h5>
-                                    <p class="text-muted mb-0">Organic Harvest Farms</p>
+                                    <h5 class="mb-1">{% trans "David Rodriguez" %}</h5>
+                                    <p class="text-muted mb-0">{% trans "Organic Harvest Farms" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -188,10 +189,10 @@
                                 <div class="mb-4">
                                     <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
                                 </div>
-                                <p class="lead mb-4">"As a family-owned berry farm, finding reliable partners is crucial. Dry Fruta's consistent orders and respect for our growing practices have made them an ideal partner for our premium berries."</p>
+                                <p class="lead mb-4">{% trans "\"As a family-owned berry farm, finding reliable partners is crucial. Dry Fruta's consistent orders and respect for our growing practices have made them an ideal partner for our premium berries.\"" %}</p>
                                 <div>
-                                    <h5 class="mb-1">Sarah Johnson</h5>
-                                    <p class="text-muted mb-0">Golden Valley Berries</p>
+                                    <h5 class="mb-1">{% trans "Sarah Johnson" %}</h5>
+                                    <p class="text-muted mb-0">{% trans "Golden Valley Berries" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -200,10 +201,10 @@
                                 <div class="mb-4">
                                     <span class="text-primary-custom fs-1"><i class="fas fa-quote-left"></i></span>
                                 </div>
-                                <p class="lead mb-4">"The partnership with Dry Fruta has allowed us to showcase our eco-friendly packaging solutions. Their commitment to sustainability aligns perfectly with our mission to reduce plastic waste in the food industry."</p>
+                                <p class="lead mb-4">{% trans "\"The partnership with Dry Fruta has allowed us to showcase our eco-friendly packaging solutions. Their commitment to sustainability aligns perfectly with our mission to reduce plastic waste in the food industry.\"" %}</p>
                                 <div>
-                                    <h5 class="mb-1">Michael Chang</h5>
-                                    <p class="text-muted mb-0">EcoPackage Solutions</p>
+                                    <h5 class="mb-1">{% trans "Michael Chang" %}</h5>
+                                    <p class="text-muted mb-0">{% trans "EcoPackage Solutions" %}</p>
                                 </div>
                             </div>
                         </div>
@@ -224,11 +225,11 @@
     <div class="container">
         <div class="row align-items-center">
             <div class="col-lg-8 mb-4 mb-lg-0">
-                <h2 class="display-5 fw-bold">Interested in Partnering with Us?</h2>
-                <p class="lead mb-0">Contact us today to discuss partnership opportunities</p>
+                <h2 class="display-5 fw-bold">{% trans "Interested in Partnering with Us?" %}</h2>
+                <p class="lead mb-0">{% trans "Contact us today to discuss partnership opportunities" %}</p>
             </div>
             <div class="col-lg-4 text-lg-end">
-                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">Get in Touch <i class="fas fa-arrow-right ms-2"></i></a>
+                <a href="{% url 'core:contacts' %}" class="btn btn-light btn-lg px-4 py-3">{% trans "Get in Touch" %} <i class="fas fa-arrow-right ms-2"></i></a>
             </div>
         </div>
     </div>
