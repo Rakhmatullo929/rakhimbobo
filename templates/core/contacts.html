@@ -24,110 +24,31 @@
                 
                 <div class="mb-4">
                     <h5 class="mb-3">{% trans "Contact Information" %}</h5>
-                    <ul class="list-unstyled">
-                        {% if contact_info %}
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Address:" %}</strong><br>
-                                    {{ contact_info.address }}
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-phone text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Phone:" %}</strong><br>
-                                    {{ contact_info.phone }}
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-envelope text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Email:" %}</strong><br>
-                                    {{ contact_info.email }}
-                                </div>
-                            </li>
+                    {% if contact_info %}
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> {{ contact_info.address }}</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i> {{ contact_info.phone }}</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i> {{ contact_info.email }}</li>
                             {% if contact_info.working_hours %}
-                                <li class="d-flex">
-                                    <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                        <i class="fas fa-clock text-white"></i>
-                                    </div>
-                                    <div>
-                                        <strong>{% trans "Working Hours:" %}</strong><br>
-                                        {{ contact_info.working_hours }}
-                                    </div>
-                                </li>
+                                <li class="mb-2"><i class="fas fa-clock me-2"></i> {{ contact_info.working_hours }}</li>
                             {% endif %}
-                        {% else %}
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-map-marker-alt text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Address:" %}</strong><br>
-                                    {% trans "123 Fruit Street, Healthy City, CA 90210" %}
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-phone text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Phone:" %}</strong><br>
-                                    {% trans "+1 (123) 456-7890" %}
-                                </div>
-                            </li>
-                            <li class="mb-3 d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-envelope text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Email:" %}</strong><br>
-                                    info@dryfruta.com
-                                </div>
-                            </li>
-                            <li class="d-flex">
-                                <div class="bg-primary-custom rounded-circle p-2 me-3 d-flex align-items-center justify-content-center" style="width: 40px; height: 40px;">
-                                    <i class="fas fa-clock text-white"></i>
-                                </div>
-                                <div>
-                                    <strong>{% trans "Working Hours:" %}</strong><br>
-                                    {% trans "Monday-Friday: 9:00 AM - 6:00 PM" %}
-                                </div>
-                            </li>
-                        {% endif %}
-                    </ul>
+                        </ul>
+                    {% else %}
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> {% trans "Ibrokhim Muminov Str. 2, 200100, Buxoro, Buxoro Viloyati, Узбекистан" %}</li>
+                            <li class="mb-2"><i class="fas fa-phone me-2"></i> +998(91) 081-88-88</li>
+                            <li class="mb-2"><i class="fas fa-envelope me-2"></i> dryfuttrakhimbobo@gmail.com</li>
+                            <li class="mb-2"><i class="fas fa-clock me-2"></i> {% trans "Mon-Fri: 9:00 AM - 6:00 PM" %}</li>
+                        </ul>
+                    {% endif %}
                 </div>
                 
                 <div class="mb-4">
                     <h5 class="mb-3">{% trans "Connect With Us" %}</h5>
                     <div class="d-flex">
-                        <a href="#" class="social-icon-lg me-2">
-                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <i class="fab fa-facebook-f text-white"></i>
-                            </div>
-                        </a>
-                        <a href="#" class="social-icon-lg me-2">
-                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <i class="fab fa-instagram text-white"></i>
-                            </div>
-                        </a>
-                        <a href="#" class="social-icon-lg me-2">
-                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <i class="fab fa-twitter text-white"></i>
-                            </div>
-                        </a>
-                        <a href="#" class="social-icon-lg me-2">
-                            <div class="bg-primary-custom rounded-circle p-2 d-flex align-items-center justify-content-center" style="width: 50px; height: 50px;">
-                                <i class="fab fa-linkedin-in text-white"></i>
-                            </div>
-                        </a>
+                        <a href="#" class="social-icon text-decoration-none me-2"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon text-decoration-none me-2"><i class="fab fa-telegram"></i></a>
+                        <a href="#" class="social-icon text-decoration-none me-2"><i class="fab fa-youtube"></i></a>
                     </div>
                 </div>
             </div>
@@ -183,11 +104,11 @@
                 <h2 class="display-6 fw-bold mb-5 text-center">{% trans "Find Us" %}</h2>
                 {% if contact_info and contact_info.map_coordinates %}
                     <div class="ratio ratio-21x9 rounded shadow overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1677.862562002925!2d64.42955489564928!3d39.767245342774245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5007006c8e9b09%3A0xfa48913656bb571c!2sRakhim%20Bobo!5e1!3m2!1sru!2s!4v1745222405388!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"r></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1677.862562002925!2d64.42955489564928!3d39.767245342774245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5007006c8e9b09%3A0xfa48913656bb571c!2sRakhim%20Bobo!5e1!3m2!1sru!2s!4v1745222405388!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 {% else %}
                     <div class="ratio ratio-21x9 rounded shadow overflow-hidden">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1677.862562002925!2d64.42955489564928!3d39.767245342774245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5007006c8e9b09%3A0xfa48913656bb571c!2sRakhim%20Bobo!5e1!3m2!1sru!2s!4v1745222405388!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"r></iframe>
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1677.862562002925!2d64.42955489564928!3d39.767245342774245!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3f5007006c8e9b09%3A0xfa48913656bb571c!2sRakhim%20Bobo!5e1!3m2!1sru!2s!4v1745222405388!5m2!1sru!2s" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 {% endif %}
             </div>
@@ -257,25 +178,7 @@
     </div>
 </section>
 
-<!-- Newsletter Section -->
-<section class="py-5 bg-primary-custom text-white">
-    <div class="container">
-        <div class="row align-items-center justify-content-center">
-            <div class="col-lg-6 mb-4 mb-lg-0 text-center text-lg-start">
-                <h2 class="fw-bold mb-1">{% trans "Subscribe to Our Newsletter" %}</h2>
-                <p class="mb-0">{% trans "Get the latest news, offers, and dried fruit tips delivered to your inbox" %}</p>
-            </div>
-            <div class="col-lg-5">
-                <form>
-                    <div class="input-group">
-                        <input type="email" class="form-control form-control-lg" placeholder="{% trans "Your Email Address" %}" aria-label="{% trans "Email Address" %}">
-                        <button class="btn btn-light px-4" type="submit">{% trans "Subscribe" %}</button>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
-</section>
+
 {% endblock %}
 
 {% block extra_css %}

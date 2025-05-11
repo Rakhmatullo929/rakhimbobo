@@ -360,4 +360,143 @@ msgid "Additives"
 msgstr "Qo'shimchalar"
 
 msgid "Natural"
-msgstr "Tabiiy" 
+msgstr "Tabiiy"
+
+# Homepage specific translations
+msgid "Premium Quality"
+msgstr "Yuqori Sifatli"
+
+msgid "Dried Fruits"
+msgstr "Quritilgan Mevalar"
+
+msgid "Experience the authentic taste of nature with our carefully selected and naturally dried fruits. Perfect for healthy snacking and culinary delights."
+msgstr "Ehtiyotkorlik bilan tanlab olingan va tabiiy ravishda quritilgan mevalarimiz bilan tabiatning haqiqiy ta'mini his qiling. Sog'lom gazak va oshxona lazzatlari uchun juda mos."
+
+msgid "Explore Products"
+msgstr "Mahsulotlarni ko'rib chiqing"
+
+msgid "Our Featured Products"
+msgstr "Bizning Taniqli Mahsulotlarimiz"
+
+msgid "Discover our selected range of premium dried fruits"
+msgstr "Premium quritilgan mevalarimizning tanlangan assortimentini kashf eting"
+
+msgid "Dried Apricots"
+msgstr "Quritilgan O'riklar"
+
+msgid "Sun-dried apricots with rich flavor and natural sweetness, packed with vitamins and minerals."
+msgstr "Vitaminlar va minerallar bilan to'ldirilgan, boy ta'm va tabiiy shirin quyoshda quritilgan o'riklar."
+
+msgid "Mixed Dried Berries"
+msgstr "Aralash Quritilgan Rezavorlar"
+
+msgid "A delicious mix of cranberries, blueberries, and strawberries, perfect for snacking or baking."
+msgstr "Gazak yoki pishirish uchun juda mos keladigan klyukva, chernika va qulupnaylarning mazali aralashmasi."
+
+msgid "Organic Dates"
+msgstr "Organik Xurmolar"
+
+msgid "Soft and juicy organic Medjool dates, a natural energy booster with caramel-like sweetness."
+msgstr "Yumshoq va sersuv organik Mejdul xurmolari, karamel kabi shirinlik bilan tabiiy energiya manbai."
+
+msgid "Health Benefits of Dried Fruits"
+msgstr "Quritilgan Mevalarning Sog'liq Uchun Foydasi"
+
+msgid "Rich in Nutrients"
+msgstr "Ozuqa Moddalarga Boy"
+
+msgid "Dried fruits are packed with essential vitamins, minerals, and antioxidants that support overall health."
+msgstr "Quritilgan mevalar umumiy sog'liqni qo'llab-quvvatlaydigan zarur vitaminlar, minerallar va antioksidantlar bilan to'ldirilgan."
+
+msgid "Natural Energy Source"
+msgstr "Tabiiy Energiya Manbai"
+
+msgid "A perfect snack for quick energy boost, ideal for active lifestyles and physical activities."
+msgstr "Tez energiya olish uchun mukammal gazak, faol turmush tarzi va jismoniy faollik uchun ideal."
+
+msgid "High in Fiber"
+msgstr "Yuqori Tolali"
+
+msgid "Supports digestive health and helps maintain healthy cholesterol levels and blood sugar."
+msgstr "Hazm qilish tizimi salomatligini qo'llab-quvvatlaydi va sog'lom xolesterin darajasi va qon shakarini saqlashga yordam beradi."
+
+msgid "Longer Shelf Life"
+msgstr "Uzoqroq Saqlash Muddati"
+
+msgid "Enjoy the benefits of fruits year-round with the convenience of extended storage life."
+msgstr "Uzaytirilgan saqlash muddati qulayligi bilan mevalarning foydasini yil davomida oling."
+
+msgid "Latest News & Articles"
+msgstr "So'nggi Yangiliklar va Maqolalar"
+
+msgid "Stay updated with our latest articles, recipes, and news"
+msgstr "Bizning so'nggi maqolalar, retseptlar va yangiliklar bilan tanishib boring"
+
+msgid "January 15, 2023"
+msgstr "15 Yanvar, 2023"
+
+msgid "Healthy Recipes with Dried Fruits"
+msgstr "Quritilgan Mevalar bilan Sog'lom Retseptlar"
+
+msgid "Discover delicious and nutritious recipes using our premium dried fruits for a healthy lifestyle."
+msgstr "Sog'lom turmush tarzi uchun bizning premium quritilgan mevalarimizdan foydalangan holda mazali va to'yimli retseptlarni kashf eting."
+
+msgid "February 3, 2023"
+msgstr "3 Fevral, 2023"
+
+msgid "The Benefits of Natural Drying Process"
+msgstr "Tabiiy Quritish Jarayonining Foydasi"
+
+msgid "Learn about our traditional sun-drying methods that preserve the nutritional value and flavor of our fruits."
+msgstr "Mevalarimizning ozuqaviy qiymati va ta'mini saqlaydigan an'anaviy quyoshda quritish usullarimiz haqida bilib oling."
+
+msgid "March 22, 2023"
+msgstr "22 Mart, 2023"
+
+msgid "Sustainable Farming Practices"
+msgstr "Barqaror Dehqonchilik Amaliyotlari"
+
+msgid "Explore how we partner with eco-friendly farms that use sustainable practices to grow the finest fruits."
+msgstr "Eng yaxshi mevalarni yetishtirish uchun barqaror amaliyotlardan foydalanadigan ekologik toza fermalar bilan qanday hamkorlik qilishimizni o'rganing."
+
+msgid "View All Articles"
+msgstr "Barcha Maqolalarni Ko'rish"
+
+msgid "What Our Customers Say"
+msgstr "Mijozlarimiz Nima Deydi"
+
+msgid "Read testimonials from our satisfied customers"
+msgstr "Mamnun mijozlarimizning sharhlarini o'qing"
+
+msgid "The quality of these dried fruits is exceptional! Fresh, flavorful, and perfect for my daily smoothies and baking. Will definitely order again."
+msgstr "Bu quritilgan mevalarning sifati ajoyib! Yangi, mazali va kundalik smoothie va pishirishlarim uchun juda mos. Albatta yana buyurtma beraman."
+
+msgid "Emma Thompson"
+msgstr "Emma Thompson"
+
+msgid "Nutritionist"
+msgstr "Nutrisiolog"
+
+msgid "I've tried many dried fruit brands, but Dry Fruta stands out for its pure taste and consistent quality. No added sugars, just natural goodness!"
+msgstr "Men ko'p quritilgan meva brendlarini sinab ko'rganman, lekin Dry Fruta o'zining sof ta'mi va doimiy sifati bilan ajralib turadi. Qo'shimcha shakarlar yo'q, faqat tabiiy yaxshilik!"
+
+msgid "Michael Chen"
+msgstr "Michael Chen"
+
+msgid "Fitness Coach"
+msgstr "Fitnes Murabbiy"
+
+msgid "Their customer service is as excellent as their products. Fast delivery and beautifully packaged. These dried fruits have become a staple in my kitchen."
+msgstr "Ularning mijozlarga xizmat ko'rsatish mahsulotlari kabi ajoyib. Tez yetkazib berish va chiroyli qadoqlangan. Bu quritilgan mevalar mening oshxonamda asosiy oziq-ovqatga aylangan."
+
+msgid "Sophia Rodriguez"
+msgstr "Sophia Rodriguez"
+
+msgid "Chef"
+msgstr "Oshpaz"
+
+msgid "Ready to Experience Premium Dried Fruits?"
+msgstr "Premium Quritilgan Mevalarni Tatib Ko'rishga Tayyormisiz?"
+
+msgid "Contact us today to place your order or inquire about our products"
+msgstr "Buyurtma berish yoki mahsulotlarimiz haqida so'rash uchun bugun biz bilan bog'laning" 
