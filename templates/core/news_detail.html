@@ -88,54 +88,36 @@
         <h2 class="display-6 fw-bold mb-5">{% trans "More News" %}</h2>
         
         <div class="row g-4">
-            <!-- Placeholder for related news -->
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1621472173504-961ceee36dcc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "New Product Launch" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "January 15, 2023" %}
+            {% with more_news=news_related|default:news_recent %}
+                {% if more_news %}
+                    {% for news_item in more_news|slice:":3" %}
+                        <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                            <div class="card h-100">
+                                <div class="card-img-container">
+                                    {% if news_item.image %}
+                                        <img src="{{ news_item.image.url }}" class="card-img-top" alt="{{ news_item.title }}">
+                                    {% else %}
+                                        <img src="{% static 'img/placeholder.jpg' %}" class="card-img-top" alt="{{ news_item.title }}">
+                                    {% endif %}
+                                </div>
+                                <div class="card-body">
+                                    <div class="mb-2 text-muted small">
+                                        <i class="far fa-calendar-alt me-1"></i> {{ news_item.created_at|date:"F d, Y" }}
+                                    </div>
+                                    <h4 class="card-title">{{ news_item.title }}</h4>
+                                    <p class="card-text">{{ news_item.content|truncatewords:15 }}</p>
+                                    <a href="{% url 'core:news_detail' news_item.slug %}" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
+                                </div>
+                            </div>
                         </div>
-                        <h4 class="card-title">{% trans "New Product Launch: Organic Mixed Berries" %}</h4>
-                        <p class="card-text">{% trans "We're excited to announce our latest product line of certified organic mixed dried berries." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
+                    {% endfor %}
+                {% else %}
+                    <!-- Placeholder for when no related news is available -->
+                    <div class="col-12 text-center">
+                        <p>{% trans "No related news available at the moment." %}</p>
                     </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1608797178974-15b35a64ede9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "Sustainable Packaging Initiative" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "February 8, 2023" %}
-                        </div>
-                        <h4 class="card-title">{% trans "Sustainable Packaging Initiative" %}</h4>
-                        <p class="card-text">{% trans "Dry Fruta commits to 100% recyclable packaging for all products by the end of this year." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1578554819102-766ba1e9c1fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "Industry Award" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "March 22, 2023" %}
-                        </div>
-                        <h4 class="card-title">{% trans "Dry Fruta Wins Food Quality Award" %}</h4>
-                        <p class="card-text">{% trans "We're proud to announce that our Turkish apricots have been recognized for outstanding quality." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
+                {% endif %}
+            {% endwith %}
         </div>
     </div>
 </section>

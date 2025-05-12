@@ -66,23 +66,17 @@ msgstr "Условия использования"
 msgid "Contact Information"
 msgstr "Контактная информация"
 
-msgid "123 Dried Fruit Street"
-msgstr "Улица Сухофруктов, 123"
-
-msgid "New York, NY 10001"
-msgstr "Нью-Йорк, 10001"
-
-msgid "Email: info@dryfruta.com"
-msgstr "Email: info@dryfruta.com"
-
-msgid "Phone: +1 (555) 123-4567"
-msgstr "Телефон: +1 (555) 123-4567"
+msgid "Ibrokhim Muminov Str. 2, 200100, Buxoro, Buxoro Viloyati, Узбекистан"
+msgstr "ул. Иброхима Муминова 2, 200100, Бухара, Бухарская область, Узбекистан"
 
 msgid "Hours of Operation"
 msgstr "Часы работы"
 
 msgid "Monday - Friday: 9:00 AM - 6:00 PM"
 msgstr "Понедельник - Пятница: 9:00 - 18:00"
+
+msgid "Mon-Fri: 9:00 AM - 6:00 PM"
+msgstr "Пн-Пт: 9:00 - 18:00"
 
 msgid "Saturday: 10:00 AM - 4:00 PM"
 msgstr "Суббота: 10:00 - 16:00"
@@ -92,6 +86,9 @@ msgstr "Воскресенье: Закрыто"
 
 msgid "All rights reserved."
 msgstr "Все права защищены."
+
+msgid "Dry Fruta. All rights reserved."
+msgstr "Dry Fruta. Все права защищены."
 
 msgid "Providing premium quality dried fruits sourced from the best farms around the world. Healthy snacks for a balanced lifestyle."
 msgstr "Предлагаем премиальные сухофрукты, полученные с лучших ферм по всему миру. Полезные закуски для сбалансированного образа жизни."
@@ -177,6 +174,84 @@ msgstr "Найти нас"
 
 msgid "Frequently Asked Questions"
 msgstr "Часто задаваемые вопросы"
+
+msgid "Premium Quality"
+msgstr "Премиальное Качество"
+
+msgid "Dried Fruits"
+msgstr "Сухофрукты"
+
+msgid "Experience the authentic taste of nature with our carefully selected and naturally dried fruits. Perfect for healthy snacking and culinary delights."
+msgstr "Ощутите подлинный вкус природы с нашими тщательно отобранными и натурально высушенными фруктами. Идеально для здорового перекуса и кулинарных изысков."
+
+msgid "Explore Products"
+msgstr "Изучить Продукты"
+
+msgid "Our Featured Products"
+msgstr "Наши Популярные Продукты"
+
+msgid "Discover our selected range of premium dried fruits"
+msgstr "Откройте для себя наш избранный ассортимент премиальных сухофруктов"
+
+msgid "View All Products"
+msgstr "Посмотреть Все Продукты"
+
+msgid "Health Benefits of Dried Fruits"
+msgstr "Польза Сухофруктов для Здоровья"
+
+msgid "Rich in Nutrients"
+msgstr "Богаты Питательными Веществами"
+
+msgid "Dried fruits are packed with essential vitamins, minerals, and antioxidants that support overall health."
+msgstr "Сухофрукты насыщены необходимыми витаминами, минералами и антиоксидантами, которые поддерживают общее здоровье."
+
+msgid "Natural Energy Source"
+msgstr "Натуральный Источник Энергии"
+
+msgid "A perfect snack for quick energy boost, ideal for active lifestyles and physical activities."
+msgstr "Идеальная закуска для быстрого восполнения энергии, подходит для активного образа жизни и физических нагрузок."
+
+msgid "High in Fiber"
+msgstr "Богаты Клетчаткой"
+
+msgid "Supports digestive health and helps maintain healthy cholesterol levels and blood sugar."
+msgstr "Поддерживает здоровье пищеварительной системы и помогает поддерживать здоровый уровень холестерина и сахара в крови."
+
+msgid "Longer Shelf Life"
+msgstr "Длительный Срок Хранения"
+
+msgid "Enjoy the benefits of fruits year-round with the convenience of extended storage life."
+msgstr "Наслаждайтесь пользой фруктов круглый год благодаря удобству длительного срока хранения."
+
+msgid "Latest News & Articles"
+msgstr "Последние Новости и Статьи"
+
+msgid "Stay updated with our latest articles, recipes, and news"
+msgstr "Будьте в курсе наших последних статей, рецептов и новостей"
+
+msgid "Healthy Recipes with Dried Fruits"
+msgstr "Здоровые Рецепты с Сухофруктами"
+
+msgid "Discover delicious and nutritious recipes using our premium dried fruits for a healthy lifestyle."
+msgstr "Откройте для себя вкусные и питательные рецепты с использованием наших премиальных сухофруктов для здорового образа жизни."
+
+msgid "January 15, 2023"
+msgstr "15 января 2023"
+
+msgid "View All Articles"
+msgstr "Посмотреть Все Статьи"
+
+msgid "What Our Customers Say"
+msgstr "Что Говорят Наши Клиенты"
+
+msgid "Read testimonials from our satisfied customers"
+msgstr "Отзывы наших довольных клиентов"
+
+msgid "Ready to Experience Premium Dried Fruits?"
+msgstr "Готовы Попробовать Премиальные Сухофрукты?"
+
+msgid "Contact us today to place your order or inquire about our products"
+msgstr "Свяжитесь с нами сегодня, чтобы сделать заказ или узнать о наших продуктах"
 
 msgid "Do you offer international shipping?"
 msgstr "Вы осуществляете международную доставку?"
@@ -349,9 +424,6 @@ msgstr "Улица Фруктовая 123, Здоровый Город"
 msgid "+1 (123) 456-7890"
 msgstr "+1 (123) 456-7890"
 
-msgid "Mon-Fri: 9:00 AM - 6:00 PM"
-msgstr "Пн-Пт: 9:00 - 18:00"
-
 msgid "Designed with"
 msgstr "Разработано с"
 
@@ -365,4 +437,59 @@ msgid "Natural"
 msgstr "Натуральный"
 
 msgid "Tasty"
-msgstr "Вкусный" 
+msgstr "Вкусный"
+
+# Adding new translations
+msgid "Our Partners"
+msgstr "Наши Партнеры"
+
+msgid "Our Leadership"
+msgstr "Наше Руководство"
+
+msgid "Explore our premium selection of high-quality dried fruits"
+msgstr "Ознакомьтесь с нашим премиальным выбором высококачественных сухофруктов"
+
+msgid "View Details"
+msgstr "Посмотреть Детали"
+
+msgid "No products available at the moment. Please check back later."
+msgstr "На данный момент продукты отсутствуют. Пожалуйста, проверьте позже."
+
+msgid "Meet the team behind Rakhimbobo's success and vision"
+msgstr "Познакомьтесь с командой, стоящей за успехом и видением Rakhimbobo"
+
+msgid "No related articles available at the moment."
+msgstr "На данный момент нет связанных статей."
+
+msgid "No related news available at the moment."
+msgstr "На данный момент нет связанных новостей."
+
+msgid "You May Also Like"
+msgstr "Вам также может понравиться"
+
+msgid "February 3, 2023"
+msgstr "3 февраля 2023"
+
+msgid "The Benefits of Natural Drying Process"
+msgstr "Преимущества натурального процесса сушки"
+
+msgid "Learn about our traditional sun-drying methods that preserve the nutritional value and flavor of our fruits."
+msgstr "Узнайте о наших традиционных методах солнечной сушки, которые сохраняют питательную ценность и вкус наших фруктов."
+
+msgid "Sustainable Farming Practices"
+msgstr "Устойчивые методы земледелия"
+
+msgid "March 22, 2023"
+msgstr "22 марта 2023"
+
+msgid "Explore how we partner with eco-friendly farms that use sustainable practices to grow the finest fruits."
+msgstr "Узнайте, как мы сотрудничаем с экологически чистыми фермами, которые используют устойчивые методы для выращивания лучших фруктов."
+
+msgid "Product Details"
+msgstr "Детали продукта"
+
+msgid "NEW"
+msgstr "НОВЫЙ"
+
+msgid "Close"
+msgstr "Закрыть" 

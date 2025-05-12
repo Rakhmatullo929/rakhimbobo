@@ -12,5 +12,5 @@ urlpatterns = [
     path('leadership/', views.leadership, name='leadership'),
     path('contacts/', views.contacts, name='contacts'),
     path('products/', views.products, name='products'),
-    path('product/<int:id>/', views.product_detail, name='product_detail'),
+    path('product/<slug:slug>/', views.product_detail, name='product_detail'),
 ] 

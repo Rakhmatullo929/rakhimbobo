@@ -2,24 +2,18 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{{ product.name }} | {{ block.super }}{% endblock %}
+{% block meta_title %}{{ product.name }} | Dry Fruta{% endblock %}
+{% block meta_description %}{{ product.short_description }}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
-<div class="page-header">
+<header class="page-header">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="content">
-                    <h1>{{ product.name }}</h1>
-                    <p>
-                        <a href="{% url 'core:products' %}">{% trans "Products" %}</a> &gt; {{ product.name }}
-                    </p>
-                </div>
-            </div>
-        </div>
+        <h1 class="display-4">{{ product.name }}</h1>
+        <p class="lead">{{ product.short_description }}</p>
     </div>
-</div>
+</header>
 
 <!-- Product Detail Section -->
 <section class="product-detail-section">
@@ -27,79 +21,28 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="product-image">
+                    {% if product.image %}
                     <img src="{{ product.image.url }}" class="img-fluid rounded" alt="{{ product.name }}">
+                    {% else %}
+                        <img src="{% static 'img/inside3.png' %}" class="img-fluid rounded" alt="{{ product.name }}">
+                    {% endif %}
+                    
                     {% if product.is_new %}
-                    <div class="new-badge">
-                        <span class="badge bg-success">{% trans "NEW" %}</span>
-                    </div>
+                        <div class="new-badge">{% trans "NEW" %}</div>
                     {% endif %}
                 </div>
             </div>
-            <div class="col-md-6">
-                <div class="product-info">
+            <div class="col-md-6 product-info">
                     <h2>{{ product.name }}</h2>
-                    <p class="price">${{ product.price }}</p>
+                <div class="price mb-4">${{ product.price }}</div>
                     <div class="product-description">
-                        {{ product.description|safe }}
+                    {{ product.description|linebreaks }}
                     </div>
-                    <div class="mt-4">
-                        <a href="{% url 'core:products' %}" class="btn btn-secondary">{% trans "Back to Products" %}</a>
-                    </div>
+                <div class="d-grid gap-2 d-md-block">
+                    <a href="{% url 'core:products' %}" class="btn btn-outline-primary-custom">{% trans "Back to Products" %}</a>
                 </div>
             </div>
         </div>
     </div>
 </section>
-{% endblock %}
-
-{% block extra_css %}
-<style>
-    .product-detail-section {
-        padding: 80px 0;
-    }
-    
-    .product-image {
-        position: relative;
-        margin-bottom: 30px;
-    }
-    
-    .new-badge {
-        position: absolute;
-        top: 10px;
-        right: 10px;
-    }
-    
-    .product-info h2 {
-        margin-bottom: 15px;
-        color: #333;
-    }
-    
-    .price {
-        font-size: 1.5rem;
-        font-weight: bold;
-        color: #e67e22;
-        margin-bottom: 20px;
-    }
-    
-    .product-description {
-        margin-bottom: 30px;
-        line-height: 1.6;
-    }
-    
-    .page-header {
-        background-color: #f8f9fa;
-        padding: 60px 0;
-        text-align: center;
-        margin-bottom: 0;
-    }
-    
-    .page-header h1 {
-        margin-bottom: 15px;
-        color: #333;
-    }
-    
-    .page-header p {
-        color: #666;
-    }
-</style>
 {% endblock %} 

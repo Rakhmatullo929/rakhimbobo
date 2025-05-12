@@ -69,7 +69,7 @@
                 </div>
                 
                 <!-- Share Section -->
-                <div class="mt-5 p-4 bg-light rounded">
+                <!-- <div class="mt-5 p-4 bg-light rounded">
                     <h5 class="mb-3">{% trans "Share this article" %}</h5>
                     <div class="d-flex gap-2">
                         <a href="https://www.facebook.com/sharer/sharer.php?u={{ request.build_absolute_uri }}" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-facebook-f me-2"></i> {% trans "Facebook" %}</a>
@@ -77,66 +77,47 @@
                         <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ request.build_absolute_uri }}" target="_blank" class="btn btn-sm btn-outline-dark"><i class="fab fa-linkedin-in me-2"></i> {% trans "LinkedIn" %}</a>
                         <a href="mailto:?subject={{ article.title }}&body={{ request.build_absolute_uri }}" class="btn btn-sm btn-outline-dark"><i class="fas fa-envelope me-2"></i> {% trans "Email" %}</a>
                     </div>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
 </section>
 
-<!-- Related Articles -->
+<!-- Related Articles Section -->
 <section class="section-padding bg-light">
     <div class="container">
         <h2 class="display-6 fw-bold mb-5">{% trans "You May Also Like" %}</h2>
         
         <div class="row g-4">
-            <!-- Placeholder for related articles -->
-            <div class="col-md-4" data-aos="fade-up">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1515003197210-e0cd71810b5f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "Healthy Recipes with Dried Fruits" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "January 15, 2023" %}
+            {% if related_articles %}
+                {% for article in related_articles|slice:":3" %}
+                    <div class="col-md-4" data-aos="fade-up" data-aos-delay="{{ forloop.counter0 }}00">
+                        <div class="card h-100">
+                            {% if article.image %}
+                                <div class="card-img-container">
+                                    <img src="{{ article.image.url }}" class="card-img-top" alt="{{ article.title }}">
+                                </div>
+                            {% else %}
+                                <div class="card-img-container">
+                                    <img src="{% static 'img/placeholder.jpg' %}" class="card-img-top" alt="{{ article.title }}">
+                                </div>
+                            {% endif %}
+                            <div class="card-body">
+                                <div class="mb-2 text-muted small">
+                                    <i class="far fa-calendar-alt me-1"></i> {{ article.created_at|date:"F d, Y" }}
+                                </div>
+                                <h4 class="card-title">{{ article.title }}</h4>
+                                <p class="card-text">{{ article.content|truncatewords:15 }}</p>
+                                <a href="{% url 'core:article_detail' article.slug %}" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
+                            </div>
                         </div>
-                        <h4 class="card-title">{% trans "Healthy Recipes with Dried Fruits" %}</h4>
-                        <p class="card-text">{% trans "Discover delicious and nutritious recipes using our premium dried fruits for a healthy lifestyle." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
                     </div>
+                {% endfor %}
+            {% else %}
+                <div class="col-12 text-center">
+                    <p>{% trans "No related articles available at the moment." %}</p>
                 </div>
-            </div>
-            
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1578554819102-766ba1e9c1fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "The Benefits of Natural Drying Process" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "February 3, 2023" %}
-                        </div>
-                        <h4 class="card-title">{% trans "The Benefits of Natural Drying Process" %}</h4>
-                        <p class="card-text">{% trans "Learn about our traditional sun-drying methods that preserve the nutritional value and flavor of our fruits." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-                <div class="card h-100">
-                    <div class="card-img-container">
-                        <img src="https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" class="card-img-top" alt="{% trans "Sustainable Farming Practices" %}">
-                    </div>
-                    <div class="card-body">
-                        <div class="mb-2 text-muted small">
-                            <i class="far fa-calendar-alt me-1"></i> {% trans "March 22, 2023" %}
-                        </div>
-                        <h4 class="card-title">{% trans "Sustainable Farming Practices" %}</h4>
-                        <p class="card-text">{% trans "Explore how we partner with eco-friendly farms that use sustainable practices to grow the finest fruits." %}</p>
-                        <a href="#" class="text-primary-custom">{% trans "Read More" %} <i class="fas fa-arrow-right ms-1"></i></a>
-                    </div>
-                </div>
-            </div>
+            {% endif %}
         </div>
     </div>
 </section>

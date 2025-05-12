@@ -1,0 +1,87 @@
+/* Стили для страницы продуктов */
+.product-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.product-card img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.price {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.products-section {
+    padding: 80px 0;
+}
+
+/* Стили для деталей продукта */
+.product-detail-section {
+    padding: 80px 0;
+}
+
+.product-image {
+    position: relative;
+    margin-bottom: 30px;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+}
+
+.new-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: var(--primary-color);
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 600;
+    padding: 5px 10px;
+    border-radius: 4px;
+}
+
+.product-info h2 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.product-description {
+    margin-bottom: 30px;
+    line-height: 1.6;
+    font-family: 'Inter', sans-serif;
+}
+
+/* Общие стили для страниц */
+.page-header {
+    background-color: #f8f9fa;
+    padding: 60px 0;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.page-header h1 {
+    margin-bottom: 15px;
+    color: var(--text-color);
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+}
+
+.page-header p {
+    color: #666;
+    font-size: 1.1rem;
+    font-family: 'Inter', sans-serif;
+} 

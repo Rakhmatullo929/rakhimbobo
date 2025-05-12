@@ -500,3 +500,31 @@ msgstr "Premium Quritilgan Mevalarni Tatib Ko'rishga Tayyormisiz?"
 
 msgid "Contact us today to place your order or inquire about our products"
 msgstr "Buyurtma berish yoki mahsulotlarimiz haqida so'rash uchun bugun biz bilan bog'laning" 
+
+msgid "Our Partners"
+msgstr "Bizning Hamkorlarimiz"
+
+msgid "Our Leadership"
+msgstr "Bizning Rahbariyatimiz"
+
+msgid "Explore our premium selection of high-quality dried fruits"
+msgstr "Yuqori sifatli premium quritilgan mevalar tanlovimizni ko'rib chiqing"
+
+msgid "View Details"
+msgstr "Batafsil Ma'lumot"
+
+msgid "No products available at the moment. Please check back later."
+msgstr "Hozirgi vaqtda mahsulotlar mavjud emas. Iltimos, keyinroq tekshirib ko'ring."
+
+msgid "View All Products"
+msgstr "Barcha Mahsulotlarni Ko'rish"
+
+# New translations
+msgid "Ibrokhim Muminov Str. 2, 200100, Buxoro, Buxoro Viloyati, Узбекистан"
+msgstr "Ibrohim Muminov ko'chasi 2, 200100, Buxoro, Buxoro viloyati, O'zbekiston"
+
+msgid "Dry Fruta. All rights reserved."
+msgstr "Dry Fruta. Barcha huquqlar himoyalangan."
+
+msgid "Meet the team behind Rakhimbobo's success and vision"
+msgstr "Rakhimbobo'ning muvaffaqiyati va ko'rinishi ortidagi jamoa bilan tanishing" 

@@ -1,7 +1,10 @@
 from django.contrib import admin
 from .models import Article, News, Partner, TeamMember, Contact, ContactMessage, Product
 from modeltranslation.admin import TranslationAdmin
+from django.contrib.auth.models import Group, User
 
+admin.site.unregister(Group)
+admin.site.unregister(User)
 
 @admin.register(Article)
 class ArticleAdmin(TranslationAdmin):

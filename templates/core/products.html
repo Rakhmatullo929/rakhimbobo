@@ -2,48 +2,66 @@
 {% load static %}
 {% load i18n %}
 
-{% block title %}{{ title }}{% endblock %}
+{% block title %}{% trans "Products" %} | {{ block.super }}{% endblock %}
+{% block meta_title %}{% trans "Products" %} | Dry Fruta{% endblock %}
+{% block meta_description %}{% trans "Explore our premium selection of high-quality dried fruits" %}{% endblock %}
 
 {% block content %}
 <!-- Page Header -->
-<div class="page-header">
+<header class="page-header">
     <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="content">
-                    <h1>{% trans "Our Products" %}</h1>
-                    <p>{% trans "Explore our premium selection of high-quality dried fruits" %}</p>
-                </div>
-            </div>
-        </div>
+        <h1 class="display-4">{% trans "Our Products" %}</h1>
+        <p class="lead">{% trans "Explore our premium selection of high-quality dried fruits" %}</p>
     </div>
-</div>
+</header>
 
 <!-- Products Section -->
 <section class="products-section">
     <div class="container">
-        <div class="row">
+        <!-- Filter or Categories could go here -->
+        
+        <!-- Products Grid -->
+        <div class="row g-4">
+            {% if products %}
             {% for product in products %}
-            <div class="col-md-4 mb-4">
-                <div class="card product-card">
-                    {% if product.is_new %}
-                    <span class="badge bg-success position-absolute top-0 end-0 m-2">{% trans "NEW" %}</span>
+                    <div class="col-md-6 col-lg-4">
+                        <div class="card product-card h-100">
+                            {% if product.image %}
+                                <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
+                            {% else %}
+                                <img src="{% static 'img/inside3.png' %}" class="card-img-top" alt="{{ product.name }}">
                     {% endif %}
-                    <img src="{{ product.image.url }}" class="card-img-top" alt="{{ product.name }}">
                     <div class="card-body">
                         <h5 class="card-title">{{ product.name }}</h5>
-                        <p class="card-text price">${{ product.price }}</p>
-                        <button class="btn btn-primary view-product" data-bs-toggle="modal" data-bs-target="#productModal" data-product-id="{{ product.id }}">
+                                <p class="card-text">{{ product.short_description|truncatechars:100 }}</p>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    {% if product.price %}
+                                        <span class="price">${{ product.price }}</span>
+                                    {% else %}
+                                        <span class="price">Call for Price</span>
+                                    {% endif %}
+                                    <button 
+                                        class="btn btn-outline-primary-custom view-product" 
+                                        data-bs-toggle="modal" 
+                                        data-bs-target="#productModal"
+                                        data-product-name="{{ product.name }}"
+                                        data-product-price="{{ product.price }}"
+                                        data-product-description="{{ product.description|linebreaks }}"
+                                        data-product-image="{% if product.image %}{{ product.image.url }}{% else %}{% static 'img/inside3.png' %}{% endif %}"
+                                        data-product-is-new="{% if product.is_new %}true{% else %}false{% endif %}"
+                                    >
                             {% trans "View Details" %}
                         </button>
                     </div>
                 </div>
             </div>
-            {% empty %}
-            <div class="col-12 text-center">
-                <p>{% trans "No products available at the moment. Please check back later." %}</p>
             </div>
             {% endfor %}
+            {% else %}
+                <div class="col-12 text-center py-5">
+                    <p class="lead">{% trans "No products available at the moment. Please check back later." %}</p>
+                </div>
+            {% endif %}
         </div>
     </div>
 </section>
@@ -59,20 +77,20 @@
             <div class="modal-body">
                 <div class="row">
                     <div class="col-md-6">
-                        <img src="" id="modal-product-image" class="img-fluid rounded" alt="Product Image">
-                        <div class="mt-2" id="modal-product-new-badge">
-                            <span class="badge bg-success">{% trans "NEW" %}</span>
+                        <div class="position-relative">
+                            <img id="modal-product-image" class="img-fluid rounded" alt="Product Image">
+                            <div id="modal-product-new-badge" class="new-badge" style="display: none;">{% trans "NEW" %}</div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <h3 id="modal-product-name"></h3>
-                        <p class="price" id="modal-product-price"></p>
-                        <div id="modal-product-description"></div>
+                    <div class="col-md-6 product-info">
+                        <h2 id="modal-product-name"></h2>
+                        <div id="modal-product-price" class="price mb-4"></div>
+                        <div id="modal-product-description" class="product-description"></div>
                     </div>
                 </div>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">{% trans "Close" %}</button>
+                <button type="button" class="btn btn-outline-primary-custom" data-bs-dismiss="modal">{% trans "Close" %}</button>
             </div>
         </div>
     </div>
@@ -83,34 +101,25 @@
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         // Event listener for product detail buttons
-        document.querySelectorAll('.view-product').forEach(button => {
+        const viewButtons = document.querySelectorAll('.view-product');
+        viewButtons.forEach(button => {
             button.addEventListener('click', function() {
-                const productId = this.getAttribute('data-product-id');
+                // Get product details from data attributes
+                const name = this.getAttribute('data-product-name');
+                const price = this.getAttribute('data-product-price');
+                const description = this.getAttribute('data-product-description');
+                const image = this.getAttribute('data-product-image');
+                const isNew = this.getAttribute('data-product-is-new') === 'true';
                 
-                // Make AJAX request to get product details
-                fetch(`/product/${productId}/`, {
-                    headers: {
-                        'X-Requested-With': 'XMLHttpRequest'
-                    }
-                })
-                .then(response => response.json())
-                .then(data => {
                     // Update modal with product data
-                    document.getElementById('modal-product-name').textContent = data.name;
-                    document.getElementById('modal-product-price').textContent = `$${data.price.toFixed(2)}`;
-                    document.getElementById('modal-product-description').innerHTML = data.description;
-                    document.getElementById('modal-product-image').src = data.image;
+                document.getElementById('modal-product-name').textContent = name;
+                document.getElementById('modal-product-price').textContent = `$${price}`;
+                document.getElementById('modal-product-description').innerHTML = description;
+                document.getElementById('modal-product-image').src = image;
                     
                     // Show or hide the "NEW" badge
-                    if (data.is_new) {
-                        document.getElementById('modal-product-new-badge').style.display = 'block';
-                    } else {
-                        document.getElementById('modal-product-new-badge').style.display = 'none';
-                    }
-                })
-                .catch(error => {
-                    console.error('Error fetching product details:', error);
-                });
+                const newBadge = document.getElementById('modal-product-new-badge');
+                newBadge.style.display = isNew ? 'block' : 'none';
             });
         });
     });
