@@ -183,3 +183,30 @@ try:
     from .settings_dev import *
 except ImportError:
     pass
+
+# === Production overrides (added by deploy) ===
+import os as _os
+
+SECRET_KEY = _os.getenv("DJANGO_SECRET_KEY", SECRET_KEY)
+DEBUG = _os.getenv("DJANGO_DEBUG", "True").strip().lower() in ("1", "true", "yes", "on")
+
+_allowed = _os.getenv("DJANGO_ALLOWED_HOSTS", "").strip()
+if _allowed:
+    ALLOWED_HOSTS = [h.strip() for h in _allowed.split(",") if h.strip()]
+
+_csrf = _os.getenv("DJANGO_CSRF_TRUSTED_ORIGINS", "").strip()
+if _csrf:
+    CSRF_TRUSTED_ORIGINS = [o.strip() for o in _csrf.split(",") if o.strip()]
+
+STATIC_ROOT = _os.path.join(BASE_DIR, "staticfiles")
+
+if "whitenoise.middleware.WhiteNoiseMiddleware" not in MIDDLEWARE:
+    MIDDLEWARE.insert(1, "whitenoise.middleware.WhiteNoiseMiddleware")
+
+STORAGES = {
+    "default": {"BACKEND": "django.core.files.storage.FileSystemStorage"},
+    "staticfiles": {"BACKEND": "whitenoise.storage.CompressedStaticFilesStorage"},
+}
+
+SECURE_PROXY_SSL_HEADER = ("HTTP_X_FORWARDED_PROTO", "https")
+USE_X_FORWARDED_HOST = True

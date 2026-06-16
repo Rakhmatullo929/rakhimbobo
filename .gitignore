@@ -34,3 +34,5 @@ update_products.py
 
 
 populate_data.py
+# local pre-deploy backups
+*.preDeploy

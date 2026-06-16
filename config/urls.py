@@ -34,3 +34,9 @@ if settings.DEBUG:
 admin.site.site_header = "Dry Fruta"
 admin.site.site_title = "Dry Fruta"
 admin.site.index_title = "Dry Fruta"
+# === Media serving in production (added by deploy) ===
+from django.urls import re_path as _re_path
+from django.views.static import serve as _serve
+urlpatterns += [
+    _re_path(r"^media/(?P<path>.*)$", _serve, {"document_root": settings.MEDIA_ROOT}),
+]

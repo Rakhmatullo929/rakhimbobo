@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16
+        env:
+          POSTGRES_DB: rakhimbobo
+          POSTGRES_USER: rakhimbobo
+          POSTGRES_PASSWORD: rakhimbobo
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U rakhimbobo"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DJANGO_SECRET_KEY: ci-secret-key
+      DJANGO_DEBUG: "True"
+      DJANGO_ALLOWED_HOSTS: "localhost,127.0.0.1"
+      DB_NAME: rakhimbobo
+      DB_USER: rakhimbobo
+      DB_PASSWORD: rakhimbobo
+      DB_HOST: localhost
+      DB_PORT: "5432"
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+      - name: Install system deps (gettext for translations)
+        run: sudo apt-get update && sudo apt-get install -y gettext
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+      - name: Django system checks
+        run: python manage.py check
+      - name: No missing migrations
+        run: python manage.py makemigrations --check --dry-run
+      - name: Apply migrations
+        run: python manage.py migrate --noinput
+      - name: Collect static
+        run: python manage.py collectstatic --noinput
